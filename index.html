@@ -76,11 +76,95 @@
                 </p>
             </div>
             
-            <button href="#case-01" class="btn-1">CASE 01</button>
+            <button class="btn-1" id="btn-case-01">CASE 01</button>
  
+        </section>
+
+
+        <!-- ============================================================
+            SECTION: CASE 01
+            Violence by an intimate partner: narrative text + data visualizations
+        ============================================================ -->
+        <section class="case" id="case-01">
+
+            <!-- QUESTION — shown by default -->
+            <div class="case__question">
+                <div class="case__header">
+                    <span class="case__number">CASE 1 OF 4</span>
+                    <p class="case__context">
+                        YOUR PARTNER ALWAYS WANTS TO KNOW WHERE YOU ARE, AND GETS UPSET WHEN YOU MAKE PLANS WITHOUT HIM/HER.
+                    </p>
+                    <p class="case__question-text">HOW ARE YOU FEELING?</p>
+                </div>
+                <div class="case__options">
+                    <button class="case__option" data-case="01" data-value="loved">FEELING LOVED</button>
+                    <button class="case__option" data-case="01" data-value="watched">FEELING WATCHED</button>
+                </div>
+            </div>
+
+            <!-- ANSWER — shown after user votes -->
+            <div class="case__answer hidden">
+                <div class="case__header">
+                    <span class="case__number">CASE 1 OF 4</span>
+                    <p class="case__context">
+                        YOUR PARTNER ALWAYS WANTS TO KNOW WHERE YOU ARE, AND GETS UPSET WHEN YOU MAKE PLANS WITHOUT HIM/HER.
+                    </p>
+                    <p class="case__question-text">HOW ARE YOU FEELING?</p>
+                </div>
+                <div class="case__results">
+                    <div class="case__result">
+                        <span class="case__result-label">FEELING LOVED</span>
+                        <span class="case__result-percent">—%</span>
+                    </div>
+                    <div class="case__result">
+                        <span class="case__result-label">FEELING WATCHED</span>
+                        <span class="case__result-percent">—%</span>
+                    </div>
+                </div>
+                <p class="case__scroll-hint">Scroll to discover ↓</p>
+            </div>
+
+            <!-- DATA — shown after user scrolls -->
+            <div class="case__data hidden">
+                <span class="case__number">CASE 1 OF 4</span>
+                <span class="case__data-title">VIOLENCE PERPETRATED BY AN INTIMATE PARTNER</span>
+                <div class="case__data-visual">
+                    <img 
+                        src="img/case-01-data.webp" 
+                        alt="31.8% of women in Europe, in an everyday situation."
+                        loading="lazy"
+                    />
+                    <span class="case__stat">31.8%</span>
+                    <button class="case__eye-btn" aria-label="See proportion">👁</button>
+                </div>
+                <div class="case__data-body">
+                    <p><span class="strong">17.7% of women in Europe have experienced physical or sexual violence by a partner.</span> When psychological violence is included, that number rises to 31.8%. Controlling where you go. Monitoring who you talk to. Isolating you from the people you love.</p>
+                    <p>For most of them (14.6%), it happened more than once.</p>
+                    <p>And in the last 12 months alone, 5.3% of women across the EU lived through it. That's not the past. That's now.</p>
+                </div>
+                <p class="case__data-caption">31.8% of women in Europe, in an everyday situation.</p>
+                <a href="#case-02" class="btn-1">Next case →</a>
+            </div>
+
+            <!-- VISUAL — full screen video, triggered by eye button -->
+            <div class="case__visual hidden">
+                <!-- <video 
+                    class="case__visual-video"
+                    src="video/case-01-visual.mp4"
+                    autoplay
+                    muted
+                    loop
+                    playsinline
+                ></video> -->
+                <p class="case__visual-caption">31.8% of women in Europe, in an everyday situation.</p>
+                <button class="case__visual-close">✕</button>
+            </div>
+
         </section>
  
  
+
+
 
 
 
@@ -91,6 +175,7 @@
 
         <!-- ARCHIVO JS PRINCIPAL -->
         <script src="js/main.js"></script>
+        <!-- <script src="js/animations.js"></script> -->
  
     </body>
 </html>

@@ -1,7 +1,7 @@
 /* IMPORTAR ARCHIVOS CSS */
 @import url(reset.css);  /* Reset de estilos */
-@import url(typography.css); /* Tipografías y estilos de texto */
 @import url(variables.css); /* Variables CSS */
+@import url(typography.css); /* Tipografías y estilos de texto */
 @import url(global.css); /* Estilos globales */
 @import url(components.css); /* Componentes comunes */
 @import url(sections.css); /* Secciones específicas */
