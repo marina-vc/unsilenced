@@ -1,0 +1,190 @@
+/* SECTIONS */
+/* CSS específico para cada sección del sitio */
+
+/* ============================================================
+   Header — (logo + burger menu)
+============================================================ */
+
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding-inline: var(--spacing-s);
+    padding-block: var(--spacing-s);
+}
+
+/* Logo — space for SVG */
+.header__logo {
+    display: block;
+    width: 80px;
+    height: auto;
+    text-decoration: none;
+}
+
+/* Hamburger button */
+.header__menu-btn {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 24px;
+    height: 16px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+}
+
+.header__menu-btn span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-white);
+}
+
+
+/* ============================================================
+   Intro
+============================================================ */
+
+#intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#intro {
+    /* Background image */
+    .intro__image {
+        position: absolute;
+        inset: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Title + subtitle wrapper */
+    .intro__content {
+        position: absolute;
+        top: 30vh;
+        left: 0;
+        width: 100%;
+        padding-inline: var(--spacing-s);
+    }
+
+    .intro__title {
+        font-family: var(--font-america);
+        font-weight: 800;
+        font-size: clamp(3rem, 14vw, 10rem);
+        line-height: 0.9;
+        color: var(--color-white);
+        text-transform: uppercase;
+        opacity: 0.4;
+    }
+
+    .intro__subtitle {
+        position: absolute;
+        top: 25vh;
+        bottom: 0;
+        right: var(--spacing-s);
+        width: 40%;
+        font-family: var(--font-america);
+        font-weight: 200;
+        font-size: var(--font-size-20);
+        color: var(--color-white);
+        text-align: right;
+        text-transform: uppercase;
+        line-height: 1;
+    }
+
+    /* Scroll indicator — gradient + blur effect */
+    .intro__scroll-indicator {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 30vh;
+
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        padding-bottom: var(--spacing-m);
+
+        background: linear-gradient(
+            to bottom,
+            transparent,
+            var(--color-black)
+        );
+
+        /* Gradient blur */
+        -webkit-backdrop-filter: blur(30px);
+        backdrop-filter: blur(30px);
+        -webkit-mask-image: linear-gradient(to bottom, transparent, black);
+        mask-image: linear-gradient(to bottom, transparent, black);
+
+        color: var(--color-white);
+        font-family: var(--font-america);
+        font-size: var(--font-size-12);
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+    }
+}
+
+/* ============================================================
+   Intro Description
+============================================================ */
+
+#intro-description {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-inline: var(--spacing-s);
+    padding-top: var(--spacing-xxl);
+    padding-bottom: var(--spacing-s);
+
+    .intro-description__content {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        p {
+            font-family: var(--font-america);
+            font-weight: 200;
+            font-size: var(--font-size-18);
+            line-height: 1.2;
+            color: var(--color-white);
+        }
+
+        strong {
+            font-weight: 700;
+        }
+
+        .intro-description__paragraph {
+            display: flex;
+            flex-direction: column;
+            gap: var(--spacing-xs);
+        }
+
+        .intro-description__footnote {
+            font-family: var(--font-america);
+            font-weight: 300;
+            font-size: var(--font-size-12);
+            color: var(--color-white);
+            opacity: 0.5;
+            line-height: 1.2;
+            padding-block: var(--spacing-s);
+        }
+    }
+
+   
+}

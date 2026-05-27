@@ -1,0 +1,33 @@
+/* VARIABLES */
+
+:root {
+ /* Colors --------------------------*/
+   --color-white: #fff;
+   --color-black: #000;
+
+ /* Font Families --------------------------*/
+   --font-america: "America", Arial, sans-serif;
+   --font-america-cnd: "America Cnd", Arial, sans-serif;
+   --font-america-cmp: "America Cmp", Arial, sans-serif;
+
+ /* Font sizes --------------------------*/
+   --font-size-12: 0.75rem;    /* 12px */
+   --font-size-14: 0.875rem;   /* 14px */
+   --font-size-16: 1rem;       /* 16px */
+   --font-size-18: 1.125rem;   /* 18px */
+   --font-size-20: 1.25rem;    /* 20px */
+   --font-size-24: 1.5rem;     /* 24px */
+   --font-size-28: 1.75rem;    /* 28px */
+   --font-size-32: 2rem;       /* 32px */
+   --font-size-48: 3rem;       /* 48px */
+   --font-size-64: 4rem;       /* 64px */
+   --font-size-80: 5rem;       /* 80px */
+
+ /* Spacing --------------------------*/
+   --spacing-xs: 10px;
+   --spacing-s: 20px;
+   --spacing-m: 40px;
+   --spacing-l: 60px;
+   --spacing-xl: 80px;
+   --spacing-xxl: 120px;
+}

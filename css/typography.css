@@ -1,0 +1,393 @@
+/* TYPOGRAPHY */
+
+/* ============================================================
+   America Standard
+============================================================ */
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-ULt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-ULt.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-ULtIt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-ULtIt.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-Th.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-Th.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-ThIt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-ThIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-Lt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-Lt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-LtIt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-LtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-Rg.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-Rg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-RgIt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-RgIt.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-Md.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-Md.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-MdIt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-MdIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-Bd.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-Bd.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-BdIt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-BdIt.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-Bl.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-Bl.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America';
+    src: url('../fonts/america-standard/GTAmericaTrial-BlIt.woff2') format('woff2'),
+         url('../fonts/america-standard/GTAmericaTrial-BlIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* ============================================================
+   America Cnd
+============================================================ */
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnULt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnULt.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnULtIt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnULtIt.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnTh.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnTh.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnThIt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnThIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnLt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnLt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnLtIt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnLtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnRg.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnRg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnRgIt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnRgIt.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnMd.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnMd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnMdIt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnMdIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnBd.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnBd.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnBdIt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnBdIt.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnBl.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnBl.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cnd';
+    src: url('../fonts/america-condensed/GTAmericaTrial-CnBlIt.woff2') format('woff2'),
+         url('../fonts/america-condensed/GTAmericaTrial-CnBlIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}
+
+
+/* ============================================================
+   America Cmp
+============================================================ */
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmULt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmULt.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmULtIt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmULtIt.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmTh.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmTh.woff') format('woff');
+    font-weight: 200;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmThIt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmThIt.woff') format('woff');
+    font-weight: 200;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmLt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmLt.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmLtIt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmLtIt.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmRg.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmRg.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmRgIt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmRgIt.woff') format('woff');
+    font-weight: 400;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmMd.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmMd.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmMdIt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmMdIt.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmBd.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmBd.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmBdIt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmBdIt.woff') format('woff');
+    font-weight: 700;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmBl.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmBl.woff') format('woff');
+    font-weight: 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'America Cmp';
+    src: url('../fonts/america-compressed/GTAmericaTrial-CmBlIt.woff2') format('woff2'),
+         url('../fonts/america-compressed/GTAmericaTrial-CmBlIt.woff') format('woff');
+    font-weight: 900;
+    font-style: italic;
+    font-display: swap;
+}

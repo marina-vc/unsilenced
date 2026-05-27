@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>114K VOICES</title>
+
+        <!-- FAVICON -->
+        <link rel="icon" type="image/png" href="assets/img/favicon.svg" sizes="96x96" />
+    
+        <!-- ARCHIVO CSS PRINCIPAL -->
+        <link rel="stylesheet" href="css/style.css">
+    </head>
+
+    <body>
+ 
+        <!-- ============================================================
+            HEADER — Fixed navigation, visible throughout the experience
+        ============================================================ -->
+        <header class="header">
+            <a href="#intro" class="header__logo">
+                <img src="img/main-logo-white.svg" alt="114K" />
+            </a>
+            <button class="header__menu-btn" aria-label="Open menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </header>
+ 
+ 
+        <!-- ============================================================
+            SECTION: INTRO
+            Full screen image of eyes + title + subtitle + scroll indicator
+        ============================================================ -->
+        <section id="intro">
+ 
+            <!-- Background image: three women's eyes -->
+            <img 
+                class="intro__image" 
+                src="img/BG-Header.png" 
+                alt="" 
+                aria-hidden="true"
+            />
+ 
+            <!-- Title and subtitle -->
+            <div class="intro__content">
+                <h1 class="intro__title">WOULD <br>YOU <br>RECOGNIZE <br>IT?</h1>
+                <p class="intro__subtitle">A data experience on gender-based violence in Europe.</p>
+            </div>
+ 
+            <!-- Scroll indicator -->
+            <div class="intro__scroll-indicator">
+                <span>Scroll</span>
+            </div>
+ 
+        </section>
+ 
+ 
+        <!-- ============================================================
+            SECTION: INTRO DESCRIPTION
+            Dark background, narrative text + footnote + CTA to Case 01
+        ============================================================ -->
+        <section id="intro-description">
+            <div class="intro-description__content">
+                <div class="intro-description__paragraph">
+                    <p>You probably know gender-based violence exists.</p>
+                    <p>But knowing it exists and <br><span class="strong">recognizing it</span> when it's in front <br>of you are two different things.</p>
+                    <p>This is data from <span class="strong">114,000 women in Europe.*</span> Real answers to real questions.</p>
+                    <p>Some of what you'll see might feel familiar. Take your time with it.</p>
+                </div>
+    
+                <p class="intro-description__footnote">
+                    * FRA, EIGE, Eurostat (2024), EU gender-based violence survey - Key results. Experiences of women in the EU-27, Publications Office of the European Union, Luxembourg.
+                </p>
+            </div>
+            
+            <button href="#case-01" class="btn-1">CASE 01</button>
+ 
+        </section>
+ 
+ 
+
+
+
+
+        <!-- GSAP -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+        <!-- ARCHIVO JS PRINCIPAL -->
+        <script src="js/main.js"></script>
+ 
+    </body>
+</html>
