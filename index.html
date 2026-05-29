@@ -29,14 +29,12 @@
             </button>
         </header>
  
- 
         <!-- ============================================================
             SECTION: INTRO
             Full screen image of eyes + title + subtitle + scroll indicator
         ============================================================ -->
         <section id="intro">
  
-            <!-- Background image: three women's eyes -->
             <img 
                 class="intro__image" 
                 src="img/BG-Header.png" 
@@ -44,19 +42,16 @@
                 aria-hidden="true"
             />
  
-            <!-- Title and subtitle -->
             <div class="intro__content">
                 <h1 class="intro__title">WOULD <br>YOU <br>RECOGNIZE <br>IT?</h1>
                 <p class="intro__subtitle">A data experience on gender-based violence in Europe.</p>
             </div>
  
-            <!-- Scroll indicator -->
             <div class="intro__scroll-indicator">
                 <span>Scroll</span>
             </div>
  
         </section>
- 
  
         <!-- ============================================================
             SECTION: INTRO DESCRIPTION
@@ -80,48 +75,40 @@
  
         </section>
 
-
         <!-- ============================================================
             SECTION: CASE 01
-            Violence by an intimate partner: narrative text + data visualizations
+            Violence by an intimate partner
         ============================================================ -->
         <section class="case" id="case-01">
 
-            <!-- QUESTION — shown by default -->
+            <!-- QUESTION / ANSWER — same screen, transforms on vote -->
             <div class="case__question">
                 <div class="case__header">
                     <span class="case__number">CASE 1 OF 4</span>
                     <p class="case__context">
                         YOUR PARTNER ALWAYS WANTS TO KNOW WHERE YOU ARE, AND GETS UPSET WHEN YOU MAKE PLANS WITHOUT HIM/HER.
                     </p>
-                    <p class="case__question-text">HOW ARE YOU FEELING?</p>
+                    <p class="case__context">HOW ARE YOU FEELING?</p>
                 </div>
                 <div class="case__options">
-                    <button class="case__option" data-case="01" data-value="loved">FEELING LOVED</button>
-                    <button class="case__option" data-case="01" data-value="watched">FEELING WATCHED</button>
-                </div>
-            </div>
+                    <button class="case__option" data-case="01" data-value="loved">
+                        <div class="case__option-inner">
+                            <svg preserveAspectRatio="none" viewBox="0 0 469 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.3802 101.78H0.000195563V2.38002H48.5802V20.02H23.3802V42.14H46.7602V59.64H23.3802V101.78ZM77.5591 84.28H103.739V101.78H54.1791V2.38002H102.759V19.88H77.5591V41.86H100.939V59.36H77.5591V84.28ZM134.062 84.28H160.242V101.78H110.682V2.38002H159.262V19.88H134.062V41.86H157.442V59.36H134.062V84.28ZM167.185 101.78V2.38002H190.565V81.62H214.505V101.78H167.185ZM242.83 101.78H219.45V2.38002H242.83V101.78ZM251.207 101.78V2.38002H275.847L289.427 42.56C290.687 47.18 292.227 51.94 293.347 56.28H293.767C293.487 49.42 293.347 42.56 293.347 35.84V2.38002H313.507V101.78H291.387L275.847 56.42C274.167 51.1 272.627 46.2 271.507 41.44H271.087C271.367 47.74 271.507 54.18 271.507 60.9V101.78H251.207ZM344.609 104.16C328.789 104.16 320.529 92.68 320.529 71.26V34.16C320.529 12.46 332.149 2.12193e-05 352.869 2.12193e-05C372.049 2.12193e-05 383.389 9.24003 383.389 26.18V34.02L359.449 38.22V27.02C359.449 20.3 357.209 16.94 352.449 16.94C347.129 16.94 344.609 21.42 344.609 30.52V72.52C344.609 81.48 347.409 86.38 353.289 86.38C358.469 86.38 361.129 82.32 361.129 75.6V63.7H352.169V46.34H383.389V101.78H366.589L365.749 86.66C363.789 97.02 356.649 104.16 344.609 104.16ZM0.000195563 210.78V111.38H23.3802V190.62H47.3202V210.78H0.000195563ZM82.6614 213.16C62.5014 213.16 50.1814 201.4 50.1814 180.4V141.76C50.1814 120.76 62.5014 109 82.6614 109C102.821 109 115.141 120.76 115.141 141.76V180.4C115.141 201.4 102.821 213.16 82.6614 213.16ZM82.6614 195.24C87.9814 195.24 91.0614 191.18 91.0614 183.48V138.68C91.0614 130.98 87.9814 126.92 82.6614 126.92C77.3414 126.92 74.2614 130.98 74.2614 138.68V183.48C74.2614 191.18 77.3414 195.24 82.6614 195.24ZM135.203 210.78L116.583 111.38H140.663L148.223 171.58C149.203 179.42 149.483 184.88 149.763 190.62H150.463C150.743 184.88 151.023 179.42 152.003 171.58L159.563 111.38H183.503L165.023 210.78H135.203ZM210.39 193.28H236.57V210.78H187.01V111.38H235.59V128.88H210.39V150.86H233.77V168.36H210.39V193.28ZM243.513 210.78V111.38H272.353C293.913 111.38 306.093 123 306.093 143.86V177.04C306.093 198.88 294.193 210.78 272.213 210.78H243.513ZM271.793 194.26C278.513 194.26 282.013 188.1 282.013 178.44V142.6C282.013 132.66 279.073 127.9 271.793 127.9H266.893V194.26H271.793Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="case__result-percent hidden">—%</span>
+                    </button>
 
-            <!-- ANSWER — shown after user votes -->
-            <div class="case__answer hidden">
-                <div class="case__header">
-                    <span class="case__number">CASE 1 OF 4</span>
-                    <p class="case__context">
-                        YOUR PARTNER ALWAYS WANTS TO KNOW WHERE YOU ARE, AND GETS UPSET WHEN YOU MAKE PLANS WITHOUT HIM/HER.
-                    </p>
-                    <p class="case__question-text">HOW ARE YOU FEELING?</p>
+                    <button class="case__option" data-case="01" data-value="watched">
+                        <div class="case__option-inner">
+                            <svg preserveAspectRatio="none" viewBox="0 0 469 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M26.8802 101.78H3.5002V2.38002H52.0802V20.02H26.8802V42.14H50.2602V59.64H26.8802V101.78ZM81.0591 84.28H107.239V101.78H57.6791V2.38002H106.259V19.88H81.0591V41.86H104.439V59.36H81.0591V84.28ZM137.562 84.28H163.742V101.78H114.182V2.38002H162.762V19.88H137.562V41.86H160.942V59.36H137.562V84.28ZM170.685 101.78V2.38002H194.065V81.62H218.005V101.78H170.685ZM246.33 101.78H222.95V2.38002H246.33V101.78ZM254.707 101.78V2.38002H279.347L292.927 42.56C294.187 47.18 295.727 51.94 296.847 56.28H297.267C296.987 49.42 296.847 42.56 296.847 35.84V2.38002H317.007V101.78H294.887L279.347 56.42C277.667 51.1 276.127 46.2 275.007 41.44H274.587C274.867 47.74 275.007 54.18 275.007 60.9V101.78H254.707ZM348.109 104.16C332.289 104.16 324.029 92.68 324.029 71.26V34.16C324.029 12.46 335.649 2.12193e-05 356.369 2.12193e-05C375.549 2.12193e-05 386.889 9.24003 386.889 26.18V34.02L362.949 38.22V27.02C362.949 20.3 360.709 16.94 355.949 16.94C350.629 16.94 348.109 21.42 348.109 30.52V72.52C348.109 81.48 350.909 86.38 356.789 86.38C361.969 86.38 364.629 82.32 364.629 75.6V63.7H355.669V46.34H386.889V101.78H370.089L369.249 86.66C367.289 97.02 360.149 104.16 348.109 104.16ZM11.2002 210.78L0.000195511 111.38H21.1402L25.0602 167.1C25.3402 171.44 25.6202 177.74 25.6202 182.78H26.3202L27.5802 169.06L33.8802 111.38H54.6002L60.9002 169.06L62.1602 182.78H62.7202C62.7202 177.74 63.0002 171.44 63.2802 167.1L67.2002 111.38H88.4802L77.2802 210.78H51.2402L45.3602 160.66C44.6602 154.22 44.5202 149.46 44.5202 144.56H43.8202C43.8202 149.46 43.6802 154.22 42.9802 160.66L37.2402 210.78H11.2002ZM85.3018 210.78L104.202 111.38H135.142L154.182 210.78H130.662L127.862 190.34H111.482L108.682 210.78H85.3018ZM113.722 173.82H125.622L121.562 144L119.882 130.42H119.462L117.782 144L113.722 173.82ZM166.337 210.78V130.98H147.717V111.38H208.197V130.98H189.577V210.78H166.337ZM242.074 213.16C221.494 213.16 210.574 202.94 210.574 181.94V141.06C210.574 120.06 222.194 109 242.634 109C262.234 109 273.434 118.52 273.434 136.72V148.06L249.354 152.4V137.28C249.354 130.42 246.974 126.92 242.214 126.92C237.174 126.92 234.654 131.12 234.654 139.24V182.78C234.654 191.04 237.174 195.24 242.074 195.24C246.834 195.24 249.494 191.46 249.494 184.18V168.5L273.294 173.12V184.18C273.294 203.08 261.534 213.16 242.074 213.16ZM341.282 111.38V210.78H317.902V169.2H303.342V210.78H279.962V111.38H303.342V151.42H317.902V111.38H341.282ZM373.107 193.28H399.287V210.78H349.727V111.38H398.307V128.88H373.107V150.86H396.487V168.36H373.107V193.28ZM406.23 210.78V111.38H435.07C456.63 111.38 468.81 123 468.81 143.86V177.04C468.81 198.88 456.91 210.78 434.93 210.78H406.23ZM434.51 194.26C441.23 194.26 444.73 188.1 444.73 178.44V142.6C444.73 132.66 441.79 127.9 434.51 127.9H429.61V194.26H434.51Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="case__result-percent hidden">—%</span>
+                    </button>
                 </div>
-                <div class="case__results">
-                    <div class="case__result">
-                        <span class="case__result-label">FEELING LOVED</span>
-                        <span class="case__result-percent">—%</span>
-                    </div>
-                    <div class="case__result">
-                        <span class="case__result-label">FEELING WATCHED</span>
-                        <span class="case__result-percent">—%</span>
-                    </div>
-                </div>
-                <p class="case__scroll-hint">Scroll to discover ↓</p>
             </div>
 
             <!-- DATA — shown after user scrolls -->
@@ -148,26 +135,11 @@
 
             <!-- VISUAL — full screen video, triggered by eye button -->
             <div class="case__visual hidden">
-                <!-- <video 
-                    class="case__visual-video"
-                    src="video/case-01-visual.mp4"
-                    autoplay
-                    muted
-                    loop
-                    playsinline
-                ></video> -->
                 <p class="case__visual-caption">31.8% of women in Europe, in an everyday situation.</p>
                 <button class="case__visual-close">✕</button>
             </div>
 
         </section>
- 
- 
-
-
-
-
-
 
         <!-- GSAP -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
@@ -175,7 +147,6 @@
 
         <!-- ARCHIVO JS PRINCIPAL -->
         <script src="js/main.js"></script>
-        <!-- <script src="js/animations.js"></script> -->
  
     </body>
 </html>

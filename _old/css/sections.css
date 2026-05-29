@@ -1,6 +1,7 @@
 /* SECTIONS */
 /* CSS específico para cada sección del sitio */
 
+
 /* ============================================================
     Header — (logo + burger menu)
 ============================================================ */
@@ -20,6 +21,7 @@
     padding-block: var(--spacing-s);
 }
 
+/* Logo — space for SVG */
 .header__logo {
     display: block;
     width: 80px;
@@ -27,6 +29,7 @@
     text-decoration: none;
 }
 
+/* Hamburger button */
 .header__menu-btn {
     display: flex;
     flex-direction: column;
@@ -52,6 +55,13 @@
 ============================================================ */
 
 #intro {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+#intro {
     position: fixed;
     top: 0;
     left: 0;
@@ -59,6 +69,8 @@
     height: 100vh;
     overflow: hidden;
 
+
+    /* Background image */
     .intro__image {
         position: absolute;
         inset: 0;
@@ -68,6 +80,7 @@
         object-position: center;
     }
 
+    /* Title + subtitle wrapper */
     .intro__content {
         position: absolute;
         top: 30vh;
@@ -77,14 +90,13 @@
     }
 
     .intro__title {
-        font-family: var(--font-america-cmp);
-        font-weight: 900;
-        font-size: clamp(3rem, 22vw, 10rem);
-        line-height: 0.85;
+        font-family: var(--font-america);
+        font-weight: 800;
+        font-size: clamp(3rem, 14vw, 10rem);
+        line-height: 0.9;
         color: var(--color-white);
         text-transform: uppercase;
         opacity: 0.4;
-        letter-spacing: -0.05em;
     }
 
     .intro__subtitle {
@@ -102,6 +114,7 @@
         line-height: 1;
     }
 
+    /* Scroll indicator — gradient + blur effect */
     .intro__scroll-indicator {
         position: absolute;
         bottom: 0;
@@ -120,6 +133,7 @@
             var(--color-black)
         );
 
+        /* Gradient blur */
         -webkit-backdrop-filter: blur(30px);
         backdrop-filter: blur(30px);
         -webkit-mask-image: linear-gradient(to bottom, transparent, black);
@@ -132,7 +146,6 @@
         text-transform: uppercase;
     }
 }
-
 
 /* ============================================================
     Intro Description
@@ -195,7 +208,9 @@
 ============================================================ */
 
 .case {
+    width: 100%;
     background-color: var(--color-black);
+
     position: fixed;
     top: 0;
     left: 0;
@@ -204,28 +219,24 @@
     overflow: hidden;
     display: none;
 
-    .case__data,
-    .case__visual {
-        display: none;
-    }
+    /* QUESTION & ANSWER --------------------------*/
 
-    /* QUESTION --------------------------*/
-
-    .case__question {
+    .case__question,
+    .case__answer {
         display: flex;
         flex-direction: column;
         width: 100%;
         height: 100vh;
-        justify-content: flex-end;
     }
 
+    /* Top block — number + context + question */
     .case__header {
         display: flex;
         flex-direction: column;
-        gap: var(--spacing-xs);
+        gap: var(--spacing-s);
         padding-inline: var(--spacing-s);
-        padding-block: var(--spacing-xs);
-        padding-bottom: var(--spacing-l);
+        padding-top: var(--spacing-xxl);
+        padding-bottom: var(--spacing-s);
     }
 
     .case__number {
@@ -240,7 +251,7 @@
 
     .case__context {
         font-family: var(--font-america);
-        font-weight: 300;
+        font-weight: 400;
         font-size: var(--font-size-14);
         color: var(--color-white);
         line-height: 1.3;
@@ -248,55 +259,101 @@
         letter-spacing: 0.05em;
     }
 
-    /* OPTIONS --------------------------*/
+    .case__question-text {
+        font-family: var(--font-america);
+        font-weight: 400;
+        font-size: var(--font-size-12);
+        color: var(--color-white);
+        opacity: 0.5;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+    }
 
+    /* OPTIONS — stacked vertically, 50/50 */
     .case__options {
         display: flex;
         flex-direction: column;
+        flex: 1;
         border-top: 1px solid rgba(255, 255, 255, 0.2);
-        padding-bottom: var(--spacing-m);
-        height: 50vh;
     }
 
     .case__option {
-        position: relative;
         display: flex;
-        align-items: stretch;
+        align-items: center;
+        justify-content: flex-start;
         flex: 1;
         padding-inline: var(--spacing-s);
-        padding-block: var(--spacing-xs);
         background-color: var(--color-black);
         border: none;
         cursor: pointer;
         overflow: hidden;
-        width: 100%;
-        transition: flex 0.6s ease;
+
+        font-family: var(--font-america-cmp);
+        font-weight: 900;
+        color: var(--color-white);
+        text-transform: uppercase;
+        text-align: left;
+        line-height: 0.85;
+
+        /* font-size set by JS fit-text */
     }
 
     .case__option:first-child {
         border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
-    
-    .case__option-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
 
-        svg {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-        }
+    /* ANSWER — options resize based on vote % */
+    .case__results {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        border-top: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .case__result {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-inline: var(--spacing-s);
+        overflow: hidden;
+        transition: flex 0.6s ease;
+    }
+
+    .case__result:first-child {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        background-color: var(--color-white);
+        color: var(--color-black);
+    }
+
+    .case__result-label {
+        font-family: var(--font-america-cmp);
+        font-weight: 900;
+        text-transform: uppercase;
+        line-height: 0.85;
+        text-align: left;
+
+        /* font-size set by JS fit-text */
     }
 
     .case__result-percent {
         font-family: var(--font-america);
         font-weight: 400;
         font-size: var(--font-size-12);
+        opacity: 0.5;
+        align-self: flex-end;
+        padding-bottom: var(--spacing-s);
+    }
+
+    .case__scroll-hint {
+        font-family: var(--font-america);
+        font-weight: 400;
+        font-size: var(--font-size-12);
         color: var(--color-white);
         opacity: 0.5;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        padding-block: var(--spacing-m);
     }
 
     /* DATA --------------------------*/
@@ -304,7 +361,7 @@
     .case__data {
         position: relative;
         width: 100%;
-        height: 100vh;
+        min-height: 100vh;
         display: flex;
         flex-direction: column;
         padding-inline: var(--spacing-s);
@@ -390,38 +447,5 @@
     .btn-1 {
         position: relative;
         z-index: 1;
-    }
-
-    /* VISUAL --------------------------*/
-
-    .case__visual {
-        position: relative;
-        width: 100%;
-        height: 100vh;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        background-color: var(--color-black);
-    }
-
-    .case__visual-caption {
-        font-family: var(--font-america);
-        font-weight: 400;
-        font-size: var(--font-size-14);
-        color: var(--color-white);
-        text-align: center;
-        padding-inline: var(--spacing-s);
-    }
-
-    .case__visual-close {
-        position: absolute;
-        top: var(--spacing-s);
-        right: var(--spacing-s);
-        background: none;
-        border: none;
-        color: var(--color-white);
-        font-size: var(--font-size-20);
-        cursor: pointer;
     }
 }
