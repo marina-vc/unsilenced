@@ -1,26 +1,187 @@
 /* COMPONENTS */
-/* Estilos específicos para componentes reutilizables del sitio como botones, formularios y grid. */
+/* Estilos específicos para componentes reutilizables del sitio como botones, formularios... */
 
 /* ============================================================
    Buttons
 ============================================================ */
 
-.btn-1 {
-    display: flex;
+/* Base — adapts to text width */
+.btn {
+    display: inline-flex;
     align-items: center;
     justify-content: center;
-
-    width: 100%;
-    padding-block: var(--spacing-s);
-
+    padding: var(--spacing-s);
+    gap: var(--spacing-s);
     background-color: var(--color-white);
     color: var(--color-black);
 
     font-family: var(--font-america);
     font-weight: 700;
     font-size: var(--font-size-16);
+    text-transform: uppercase;
     text-decoration: none;
-
-    /* cursor: pointer; El descomentaré quan faci la versió desktop */ 
     border: none;
+}
+@media (min-width: 1024px) {
+    .btn{cursor: pointer; transition: all 0.3s ease;}
+    .btn:hover{opacity: 0.75; translate: scale(2)}
+}
+
+/* Full width */
+.btn--full {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding-block: var(--spacing-s);
+    background-color: var(--color-white);
+    color: var(--color-black);
+    
+    font-family: var(--font-america);
+    font-weight: 700;
+    font-size: var(--font-size-16);
+    text-transform: uppercase;
+    text-decoration: none;
+    border: none;
+}
+@media (min-width: 1024px) {
+    .btn--full{cursor: pointer; transition: all 0.3s ease;}
+    .btn--full:hover{opacity: 0.75;}
+}
+
+/* Back — black square */
+.btn--back {
+    aspect-ratio: 1 / 1;
+    min-width: 60px;
+    height: 62px;
+    flex-shrink: 0;
+    background-color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='23' viewBox='0 0 21 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0762 22.0317L1.41399 11.3694L12.0762 0.707181' stroke='white' stroke-width='2'/%3E%3Cpath d='M1.14428 11.6385L20.579 11.6387' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    border: none;
+}
+@media (min-width: 1024px) {
+    .btn--back{cursor: pointer; transition: all 0.3s ease;}
+    .btn--back:hover{opacity: 0.75;}
+}
+
+/* Back — white square */
+.btn--back--white {
+    aspect-ratio: 1 / 1;
+    min-width: 60px;
+    height: 62px;
+    flex-shrink: 0;
+    background-color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='23' viewBox='0 0 21 23' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0762 22.0317L1.41399 11.3694L12.0762 0.707181' stroke='black' stroke-width='2'/%3E%3Cpath d='M1.14428 11.6385L20.579 11.6387' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    border: none;
+}
+@media (min-width: 1024px) {
+    .btn--back--white{cursor: pointer; transition: all 0.3s ease;}
+    .btn--back--white:hover{opacity: 0.75;}
+}
+
+/* Back — white line */
+.btn--back--lined {
+    aspect-ratio: 1 / 1;
+    min-width: 60px;
+    height: 62px;
+    flex-shrink: 0;
+    background-color: var(--color-black);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url("data:image/svg+xml,%3Csvg width='21' height='23' viewBox='0 0 21 23' fill='black' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0762 22.0317L1.41399 11.3694L12.0762 0.707181' stroke='white' stroke-width='2'/%3E%3Cpath d='M1.14428 11.6385L20.579 11.6387' stroke='white' stroke-width='2'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 40%;
+    border: 1px solid var(--color-white);
+}
+@media (min-width: 1024px) {
+    .btn--back--lined {cursor: pointer; transition: all 0.3s ease;}
+    .btn--back--lined:hover{opacity: 0.75;}
+}
+
+/* Play — white square */
+.btn--play {
+    aspect-ratio: 1 / 1;
+    width: 60px;
+    background-color: var(--color-white);
+    border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    position: relative;
+}
+@media (min-width: 1024px) {
+    .btn--play {cursor: pointer; transition: all 0.3s ease;}
+    .btn--play{opacity: 0.75;}
+}
+
+.btn--play::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg width='28' height='32' viewBox='0 0 28 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.314 15.7698L0.000120585 31.5394L0.000121964 0.000119923L27.314 15.7698Z' fill='black'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: calc(50% + 2px) center;
+    background-size: 40%;
+    animation: pulse 3s ease-in-out infinite;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 0.1; }
+    50% { opacity: 1; }
+}
+
+@media (min-width: 1024px) {
+    .btn--play:hover{
+        cursor: pointer;
+        opacity: 0.6;
+        translate: scale (1.4)
+    }
+}
+
+
+/* ============================================================
+   Gradients
+============================================================ */
+
+/* Black gradient — bottom */
+.gradient--black {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 20vh;
+    pointer-events: none;
+    z-index: 3;
+    background: linear-gradient(to bottom, transparent 0%, var(--color-black) 100%);
+}
+
+/* Blur gradient — bottom */
+.gradient--blur {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40vh;
+    pointer-events: none;
+    z-index: 2; 
+
+    -webkit-backdrop-filter: blur(30px);
+    backdrop-filter: blur(30px);
+    -webkit-mask-image: linear-gradient(to bottom, transparent 40px, black);
+    mask-image: linear-gradient(to bottom, transparent 40px, black);
 }

@@ -4,7 +4,7 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>114K VOICES</title>
+        <title>UNSILENCED</title>
 
         <!-- FAVICON -->
         <link rel="icon" type="image/png" href="assets/img/favicon.svg" sizes="96x96" />
@@ -14,13 +14,81 @@
     </head>
 
     <body>
+        <!-- ============================================================
+            MENU — slide in from right
+        ============================================================ -->
+        <div id="menu" class="menu">
+            <div class="menu__header">
+                <!-- <a href="#" class="menu__logo">
+                    <img src="img/main-logo-white.svg" alt="unsilenced" />
+                </a> -->
+                <button class="menu__close" id="menu-close">
+                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 1L21 21M21 1L1 21" stroke="black" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+
+            <nav class="menu__nav">
+                <a href="#" class="menu__case-link" data-target="01">
+                    <div>
+                        <span class="menu__case-number">CASE 01</span>
+                        <span class="menu__case-subtitle">Intimate partner</span>
+                    </div>
+                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="black" stroke-width="2"/>
+                        <path d="M0.000235891 11.0999L19.435 11.1002" stroke="black" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="#" class="menu__case-link" data-target="02">
+                    <div>
+                        <span class="menu__case-number">CASE 02</span>
+                        <span class="menu__case-subtitle">Other than an intimate partner</span>
+                    </div>
+                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="black" stroke-width="2"/>
+                        <path d="M0.000235891 11.0999L19.435 11.1002" stroke="black" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="#" class="menu__case-link" data-target="03">
+                    <div>
+                        <span class="menu__case-number">CASE 03</span>
+                        <span class="menu__case-subtitle">Sexual harassment at work</span>
+                    </div>
+                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="black" stroke-width="2"/>
+                        <path d="M0.000235891 11.0999L19.435 11.1002" stroke="black" stroke-width="2"/>
+                    </svg>
+                </a>
+                <a href="#" class="menu__case-link" data-target="04">
+                    <div>
+                        <span class="menu__case-number">CASE 04</span>
+                        <span class="menu__case-subtitle">Any perpetrator</span>
+                    </div>
+                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="black" stroke-width="2"/>
+                        <path d="M0.000235891 11.0999L19.435 11.1002" stroke="black" stroke-width="2"/>
+                    </svg>
+                </a>
+            </nav>
+
+            <div class="menu__footer">
+                <a href="https://fra.europa.eu/en/publication/2026/eu-gender-based-violence-survey-evidence" target="_blank" class="menu__footer-link">
+                    Explore the full data
+                </a>
+                <a href="#" class="menu__footer-link js-open-contact">
+                    Get Help or Contact us
+                </a>
+            </div>
+        </div>
  
+
         <!-- ============================================================
             HEADER — Fixed navigation, visible throughout the experience
         ============================================================ -->
         <header class="header">
             <a href="#intro" class="header__logo">
-                <img src="img/main-logo-white.svg" alt="114K" />
+                <img src="img/main-logo-white.svg" alt="unsilenced logo" />
             </a>
             <button class="header__menu-btn" aria-label="Open menu">
                 <span></span>
@@ -29,51 +97,75 @@
             </button>
         </header>
  
+
         <!-- ============================================================
             SECTION: INTRO
             Full screen image of eyes + title + subtitle + scroll indicator
         ============================================================ -->
         <section id="intro">
  
-            <img 
-                class="intro__image" 
-                src="img/BG-Header.png" 
-                alt="" 
-                aria-hidden="true"
-            />
+            <div class="intro__video--wrapper">
+                <video class="intro__video" autoplay loop muted playsinline>
+                    <source src="video/intro-video-01.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video" autoplay loop muted playsinline>
+                    <source src="video/intro-video-02.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video" autoplay loop muted playsinline>
+                    <source src="video/intro-video-03.mp4" type="video/mp4">
+                </video>
+
+                <!-- Videos only shown in desktop -->
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
+                    <source src="video/intro-video-02.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
+                    <source src="video/intro-video-03.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
+                    <source src="video/intro-video-01.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
+                    <source src="video/intro-video-03.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
+                    <source src="video/intro-video-01.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
+                    <source src="video/intro-video-02.mp4" type="video/mp4">
+                </video>
+            </div>
  
             <div class="intro__content">
-                <h1 class="intro__title">WOULD <br>YOU <br>RECOGNIZE <br>IT?</h1>
-                <p class="intro__subtitle">A data experience on gender-based violence in Europe.</p>
+                <p class="intro__subtitle">A data experience on <br>gender-based violence in Europe —<br><span class="strong">Answers from 114K women.<span class="esterisc">*</span></p>
+                <p class="intro__subtitle--footnote">*FRA, EIGE, Eurostat (2024), EU gender-based violence survey - Key results. Experiences of women in the EU-27, Publications Office of the European Union, Luxembourg.</p>
             </div>
  
-            <div class="intro__scroll-indicator">
-                <span>Scroll</span>
+            <div class="intro__scroll-indicator gradient--black">
+                <span>Scroll to start</span>
             </div>
- 
+
         </section>
  
+
         <!-- ============================================================
             SECTION: INTRO DESCRIPTION
             Dark background, narrative text + footnote + CTA to Case 01
         ============================================================ -->
         <section id="intro-description">
             <div class="intro-description__content">
-                <div class="intro-description__paragraph">
-                    <p>You probably know gender-based violence exists.</p>
-                    <p>But knowing it exists and <br><span class="strong">recognizing it</span> when it's in front <br>of you are two different things.</p>
-                    <p>This is data from <span class="strong">114,000 women in Europe.*</span> Real answers to real questions.</p>
-                    <p>Some of what you'll see might feel familiar. Take your time with it.</p>
-                </div>
-    
-                <p class="intro-description__footnote">
-                    * FRA, EIGE, Eurostat (2024), EU gender-based violence survey - Key results. Experiences of women in the EU-27, Publications Office of the European Union, Luxembourg.
-                </p>
+                <!-- <p>This is data from <span class="strong"><114,000 women in Europe.*</span> Real answers to real questions.</p> -->
+                <p>You probably know gender-based violence exists.</p>
+                <p>But knowing it exists and <span class="strong">recognizing it</span> when it's in front of you are two different things.</p>       
+                <p>Would you know how it looks like?</p>
             </div>
-            
-            <button class="btn-1" id="btn-case-01">CASE 01</button>
- 
+
+            <div class="intro-description__bottom">
+                <p class="intro-description__footnote">*FRA, EIGE, Eurostat (2024), EU gender-based violence survey - Key results. Experiences of women in the EU-27, Publications Office of the European Union, Luxembourg.</p>
+                <button class="btn--full" id="btn-case-01">Let's find out — CASE 01</button>
+            </div>
         </section>
+
 
         <!-- ============================================================
             SECTION: CASE 01
@@ -86,7 +178,7 @@
                 <div class="case__header">
                     <span class="case__number">CASE 1 OF 4</span>
                     <p class="case__context">
-                        YOUR PARTNER ALWAYS WANTS TO KNOW WHERE YOU ARE, AND GETS UPSET WHEN YOU MAKE PLANS WITHOUT HIM/HER.
+                        YOUR PARTNER ALWAYS WANTS TO KNOW WHERE YOU ARE, AND GETS UPSET WHEN YOU MAKE PLANS WITHOUT HIM.
                     </p>
                     <p class="case__context">HOW ARE YOU FEELING?</p>
                 </div>
@@ -109,44 +201,714 @@
                         <span class="case__result-percent hidden">—%</span>
                     </button>
                 </div>
-            </div>
 
-            <!-- DATA — shown after user scrolls -->
-            <div class="case__data hidden">
-                <span class="case__number">CASE 1 OF 4</span>
-                <span class="case__data-title">VIOLENCE PERPETRATED BY AN INTIMATE PARTNER</span>
-                <div class="case__data-visual">
-                    <img 
-                        src="img/case-01-data.webp" 
-                        alt="31.8% of women in Europe, in an everyday situation."
-                        loading="lazy"
-                    />
-                    <span class="case__stat">31.8%</span>
-                    <button class="case__eye-btn" aria-label="See proportion">👁</button>
+                <div class="case__scroll-indicator hidden">
+                    <span>Scroll</span>
                 </div>
-                <div class="case__data-body">
-                    <p><span class="strong">17.7% of women in Europe have experienced physical or sexual violence by a partner.</span> When psychological violence is included, that number rises to 31.8%. Controlling where you go. Monitoring who you talk to. Isolating you from the people you love.</p>
-                    <p>For most of them (14.6%), it happened more than once.</p>
-                    <p>And in the last 12 months alone, 5.3% of women across the EU lived through it. That's not the past. That's now.</p>
-                </div>
-                <p class="case__data-caption">31.8% of women in Europe, in an everyday situation.</p>
-                <a href="#case-02" class="btn-1">Next case →</a>
-            </div>
-
-            <!-- VISUAL — full screen video, triggered by eye button -->
-            <div class="case__visual hidden">
-                <p class="case__visual-caption">31.8% of women in Europe, in an everyday situation.</p>
-                <button class="case__visual-close">✕</button>
             </div>
 
         </section>
 
-        <!-- GSAP -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
+        <!-- DATA screen -->
+        <section class="case__data hidden" data-case="01">
+            <img 
+                src="img/case-01-pic.jpg" 
+                alt="" 
+                aria-hidden="true"
+            />
+            <div class="case__data-header">
+                <span class="case__number">CASE 1 OF 4</span>
+                <span class="case__data-title">VIOLENCE PERPETRATED BY <br>AN INTIMATE PARTNER</span>
+            </div>
+
+            <div class="case__data-scroll">
+                <!-- Data 01 (17.7%) -->
+                <div class="case__data-row">
+                    <span class="case__stat">17.7<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <button class="btn--play" data-case="01" data-stat="17.7" aria-label="See proportion"></button>
+                        <p class="case__paragraph strong">17.7% of women in Europe have experienced physical or sexual violence by a partner.</p>
+                    </div>
+                </div>
+
+                <!-- Data 02 (31.8%) -->
+                <div class="case__data-row">
+                    <span class="case__stat">31.8<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <button class="btn--play" data-case="01" data-stat="31.8" aria-label="See proportion"></button>
+                        <div>
+                            <p class="case__paragraph strong">When psychological violence is included, that number rises to 31.8%. </p>
+                            <p class="case__paragraph">Controlling where you go. Monitoring who you talk to. Isolating you from the people you love.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Data 03 (14.6%) -->
+                <div class="case__data-row">
+                    <span class="case__stat">14.6<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <div>
+                            <p class="case__paragraph strong">For most of them (14.6%),it happened more than once. </p>
+                            <p class="case__paragraph strong">And in the last 12 months alone, 5.3% of women across the EU lived through it. </p>
+                            <p class="case__paragraph">That's not the past. <br>That's now.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="gradient--blur gradient--black"></div>
+
+            <!------ PANTALLAS VISUALES QUÉ SIGNIFA EL X% ------>
+            <!-- VISUAL 17.7% -->
+            <div class="case__data-visual hidden" data-stat="17.7">
+                <video autoplay loop muted playsinline>
+                    <source src="video/unsilenced-intimate-partner.mp4" type="video/mp4">
+                </video>
+                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
+                <span class="strong">17.7% have experienced <br>physical or sexual violence.<br></span>
+                We marked them.</p>
+            </div>
+
+            <!-- VISUAL 31.8% -->
+            <div class="case__data-visual hidden" data-stat="31.8">
+                <video autoplay loop muted playsinline>
+                    <source src="video/unsilenced-intimate-partner.mp4" type="video/mp4">
+                </video>
+                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
+                <span class="strong">31.8% have experienced <br>physical, sexual or psychological violence.<br></span>
+                We marked them.</p>
+            </div>
+
+        </section>
+
+        <!-- ============================================================
+            SECTION: CASE 02
+            Violence by people other than an intimate partner
+        ============================================================ -->
+        <section class="case" id="case-02">
+            <div class="case__question">
+                <div class="case__header">
+                    <span class="case__number">CASE 2 OF 4</span>
+                    <p class="case__context">
+                        THEY ALWAYS SEEM TO BE AROUND. AT THE SAME PLACES. ONLINE. OFFLINE. YOU HAVEN'T TOLD THEM WHERE YOU'D BE.
+                    </p>
+                    <p class="case__context">HOW DOES THAT FEEL?</p>
+                </div>
+                <div class="case__options">
+                    <button class="case__option" data-case="02" data-value="exposed">
+                        <div class="case__option-inner">
+                            <svg preserveAspectRatio="none" viewBox="0 0 450 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.4721 102.181H0V2.38938H48.7714V20.0989H23.4721V42.3061H46.9443V59.875H23.4721V102.181Z" fill="white"/>
+                                <path d="M77.8645 84.6121H104.148V102.181H54.3924V2.38938H103.164V19.9583H77.8645V42.025H101.337V59.5939H77.8645V84.6121Z" fill="white"/>
+                                <path d="M134.59 84.6121H160.874V102.181H111.118V2.38938H159.89V19.9583H134.59V42.025H158.062V59.5939H134.59V84.6121Z" fill="white"/>
+                                <path d="M167.844 102.181V2.38938H191.316V81.9417H215.35V102.181H167.844Z" fill="white"/>
+                                <path d="M243.787 102.181H220.315V2.38938H243.787V102.181Z" fill="white"/>
+                                <path d="M252.197 102.181V2.38938H276.934L290.568 42.7277C291.833 47.3659 293.379 52.1447 294.503 56.5018H294.925C294.644 49.6148 294.503 42.7277 294.503 35.9812V2.38938H314.742V102.181H292.535L276.934 56.6423C275.247 51.3014 273.701 46.3821 272.577 41.6033H272.155C272.436 47.9281 272.577 54.3935 272.577 61.14V102.181H252.197Z" fill="white"/>
+                                <path d="M345.967 104.57C330.085 104.57 321.792 93.0452 321.792 71.5408V34.2946C321.792 12.5091 333.458 0 354.259 0C373.515 0 384.9 9.27642 384.9 26.2832V34.1541L360.865 38.3706V27.1265C360.865 20.38 358.617 17.0068 353.838 17.0068C348.497 17.0068 345.967 21.5044 345.967 30.6403V72.8058C345.967 81.8011 348.778 86.7204 354.681 86.7204C359.882 86.7204 362.552 82.6444 362.552 75.8979V63.951H353.557V46.5226H384.9V102.181H368.034L367.19 87.0015C365.222 97.4023 358.054 104.57 345.967 104.57Z" fill="white"/>
+                                <path d="M23.4721 194.042H49.7553V211.611H0V111.819H48.7714V129.388H23.4721V151.454H46.9443V169.023H23.4721V194.042Z" fill="white"/>
+                                <path d="M53.9148 211.611L70.0782 158.904L55.0392 111.819H79.3546L84.555 134.448C85.82 139.648 86.2416 143.302 86.6633 148.503H86.9444C87.3661 143.302 87.7877 139.789 89.0527 134.448L94.5342 111.819H118.709L103.951 159.185L119.974 211.611H95.5181L88.631 182.235C87.7877 178.862 87.2255 174.224 86.8039 168.321H86.3822C86.1011 172.256 85.6794 176.613 84.555 182.095L78.2302 211.611H53.9148Z" fill="white"/>
+                                <path d="M149.002 211.611H125.53V111.819H156.03C175.988 111.819 186.249 120.814 186.389 138.243V146.395C186.389 165.088 175.988 175.208 156.592 175.208H149.002V211.611ZM149.002 159.044H153.5C159.684 159.044 162.214 155.39 162.214 145.973V138.805C162.214 130.793 159.684 127.561 153.5 127.561H149.002V159.044Z" fill="white"/>
+                                <path d="M224.165 214C203.925 214 191.557 202.194 191.557 181.111V142.319C191.557 121.236 203.925 109.43 224.165 109.43C244.404 109.43 256.773 121.236 256.773 142.319V181.111C256.773 202.194 244.404 214 224.165 214ZM224.165 196.009C229.506 196.009 232.598 191.933 232.598 184.203V139.227C232.598 131.496 229.506 127.42 224.165 127.42C218.824 127.42 215.731 131.496 215.731 139.227V184.203C215.731 191.933 218.824 196.009 224.165 196.009Z" fill="white"/>
+                                <path d="M292.491 214C273.236 214 261.992 202.615 261.992 186.171V178.3L285.885 173.802V186.311C285.885 192.496 287.853 196.572 292.632 196.572C297.411 196.572 299.097 192.777 299.097 188.701V184.344C299.097 179.565 298.113 177.035 292.772 173.802L276.75 164.245C266.349 158.06 262.835 150.892 262.835 139.929V134.588C262.835 116.879 276.89 109.43 292.632 109.43C310.763 109.43 322.991 116.035 322.991 135.994V143.303L299.519 147.519V135.432C299.519 130.793 297.832 126.858 292.632 126.858C288.556 126.858 286.307 129.81 286.307 133.464V137.68C286.307 141.756 288.837 145.13 292.632 147.378L308.514 156.795C319.899 163.542 322.991 170.007 322.991 180.268V189.544C322.991 203.178 312.45 214 292.491 214Z" fill="white"/>
+                                <path d="M353.494 194.042H379.777V211.611H330.022V111.819H378.793V129.388H353.494V151.454H376.966V169.023H353.494V194.042Z" fill="white"/>
+                                <path d="M386.748 211.611V111.819H415.701C437.346 111.819 449.574 123.485 449.574 144.427V177.738C449.574 199.664 437.627 211.611 415.561 211.611H386.748ZM415.139 195.026C421.886 195.026 425.399 188.841 425.399 179.143V143.162C425.399 133.183 422.448 128.404 415.139 128.404H410.22V195.026H415.139Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="case__result-percent hidden">—%</span>
+                    </button>
+
+                    <button class="case__option" data-case="02" data-value="popular">
+                        <div class="case__option-inner">
+                            <svg preserveAspectRatio="none" viewBox="0 0 459 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M23.4721 102.181H0V2.38938H48.7714V20.0989H23.4721V42.3061H46.9443V59.875H23.4721V102.181Z" fill="white"/>
+                                <path d="M77.8645 84.6121H104.148V102.181H54.3924V2.38938H103.164V19.9583H77.8645V42.025H101.337V59.5939H77.8645V84.6121Z" fill="white"/>
+                                <path d="M134.59 84.6121H160.874V102.181H111.118V2.38938H159.89V19.9583H134.59V42.025H158.062V59.5939H134.59V84.6121Z" fill="white"/>
+                                <path d="M167.844 102.181V2.38938H191.316V81.9417H215.35V102.181H167.844Z" fill="white"/>
+                                <path d="M243.787 102.181H220.315V2.38938H243.787V102.181Z" fill="white"/>
+                                <path d="M252.197 102.181V2.38938H276.934L290.568 42.7277C291.833 47.3659 293.379 52.1447 294.503 56.5018H294.925C294.644 49.6148 294.503 42.7277 294.503 35.9812V2.38938H314.742V102.181H292.535L276.934 56.6423C275.247 51.3014 273.701 46.3821 272.577 41.6033H272.155C272.436 47.9281 272.577 54.3935 272.577 61.14V102.181H252.197Z" fill="white"/>
+                                <path d="M345.967 104.57C330.085 104.57 321.792 93.0452 321.792 71.5408V34.2946C321.792 12.5091 333.458 0 354.259 0C373.515 0 384.9 9.27642 384.9 26.2832V34.1541L360.865 38.3706V27.1265C360.865 20.38 358.617 17.0068 353.838 17.0068C348.497 17.0068 345.967 21.5044 345.967 30.6403V72.8058C345.967 81.8011 348.778 86.7204 354.681 86.7204C359.882 86.7204 362.552 82.6444 362.552 75.8979V63.951H353.557V46.5226H384.9V102.181H368.034L367.19 87.0015C365.222 97.4023 358.054 104.57 345.967 104.57Z" fill="white"/>
+                                <path d="M23.4721 211.611H0V111.819H30.4997C50.4581 111.819 60.7183 120.814 60.8589 138.243V146.395C60.8589 165.088 50.4581 175.208 31.0619 175.208H23.4721V211.611ZM23.4721 159.044H27.9698C34.1541 159.044 36.684 155.39 36.684 145.973V138.805C36.684 130.793 34.1541 127.561 27.9698 127.561H23.4721V159.044Z" fill="white"/>
+                                <path d="M98.6344 214C78.3949 214 66.0264 202.194 66.0264 181.111V142.319C66.0264 121.236 78.3949 109.43 98.6344 109.43C118.874 109.43 131.242 121.236 131.242 142.319V181.111C131.242 202.194 118.874 214 98.6344 214ZM98.6344 196.009C103.975 196.009 107.067 191.933 107.067 184.203V139.227C107.067 131.496 103.975 127.42 98.6344 127.42C93.2934 127.42 90.2013 131.496 90.2013 139.227V184.203C90.2013 191.933 93.2934 196.009 98.6344 196.009Z" fill="white"/>
+                                <path d="M161.767 211.611H138.295V111.819H168.795C188.753 111.819 199.014 120.814 199.154 138.243V146.395C199.154 165.088 188.753 175.208 169.357 175.208H161.767V211.611ZM161.767 159.044H166.265C172.449 159.044 174.979 155.39 174.979 145.973V138.805C174.979 130.793 172.449 127.561 166.265 127.561H161.767V159.044Z" fill="white"/>
+                                <path d="M204.338 111.819H227.81V185.187C227.81 191.09 230.34 194.323 234.978 194.323C239.616 194.323 242.287 191.09 242.287 185.187V111.819H265.619V186.03C265.619 203.459 254.656 214 234.978 214C215.16 214 204.338 203.599 204.338 186.03V111.819Z" fill="white"/>
+                                <path d="M273.296 211.611V111.819H296.768V191.371H320.803V211.611H273.296Z" fill="white"/>
+                                <path d="M323.439 211.611L342.414 111.819H373.475L392.591 211.611H368.978L366.167 191.09H349.722L346.911 211.611H323.439ZM351.971 174.505H363.918L359.842 144.567L358.155 130.934H357.734L356.047 144.567L351.971 174.505Z" fill="white"/>
+                                <path d="M395.395 211.611V111.819H424.63C447.399 111.819 456.254 122.36 456.254 139.508V143.584C456.254 154.968 451.897 162.418 445.01 166.212L458.362 211.611H433.906L424.489 171.975H418.867V211.611H395.395ZM418.867 157.639H422.943C429.83 157.639 432.079 153.703 432.079 145.13V138.102C432.079 130.231 429.69 127.42 422.943 127.42H418.867V157.639Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="case__result-percent hidden">—%</span>
+                    </button>
+                </div>
+                <div class="case__scroll-indicator hidden">
+                    <span>Scroll</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATA screen -->
+        <section class="case__data hidden" data-case="02">
+            <img src="img/case-02-pic.jpg" alt="" aria-hidden="true" />
+            <div class="case__data-header">
+                <span class="case__number">CASE 2 OF 4</span>
+                <span class="case__data-title">VIOLENCE PERPETRATED BY <br>PEOPLE OTHER THAN <br>AN INTIMATE PARTNER</span>
+            </div>
+            <div class="case__data-scroll">
+                <!-- Data 01 (20.2%) -->
+                <div class="case__data-row">
+                    <span class="case__stat">20.2<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <button class="btn--play" data-case="02" data-stat="20.2" aria-label="See proportion"></button>
+                        <div>
+                            <p class="case__paragraph strong">More than 1 in 5 women (20.2%) have experienced physical and/or sexual violence by someone other than a partner.</p>
+                            <p class="case__paragraph">Not a stranger. <br>Usually someone they knew.<br>Someone from their circle.</p>
+                            <p class="case__paragraph">Followed. Watched. Tracked. <br>Online and offline.</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- Data 01 (12.9%) -->
+                <div class="case__data-row">
+                    <span class="case__stat">12.9<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <button class="btn--play" data-case="02" data-stat="12.9" aria-label="See proportion"></button>
+                        <div>
+                            <p class="case__paragraph strong">12.9% have experienced sexual violence since the age of 15.</p>
+                            <p class="case__paragraph">3.8% have been raped — by someone other than a partner.</p>
+                            <p class="case__paragraph">And most of them never reported it.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <div class="gradient--blur gradient--black"></div>
+
+            <div class="case__data-visual hidden" data-stat="20.2">
+                <video autoplay loop muted playsinline>
+                    <source src="video/unsilenced-other-than-an-intimate-partner.mp4" type="video/mp4">
+                </video>
+                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
+                <span class="strong">20.2% have experienced <br>physical or sexual violence <br>by someone other than a partner.<br></span>
+                We marked them.</p>
+            </div>
+            <div class="case__data-visual hidden" data-stat="12.9">
+                <video autoplay loop muted playsinline>
+                    <source src="video/unsilenced-other-than-an-intimate-partner.mp4" type="video/mp4">
+                </video>
+                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
+                <span class="strong">12.9% have experienced <br>sexual violence since the age of 15.<br></span>
+                We marked them.</p>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+            SECTION: CASE 03
+            Sexual harassment at work
+        ============================================================ -->
+        <section class="case" id="case-03">
+            <div class="case__question">
+                <div class="case__header">
+                    <span class="case__number">CASE 3 OF 4</span>
+                    <p class="case__context">
+                        SOMEONE AT WORK SAYS SOMETHING ABOUT YOUR BODY. YOU NEED THIS JOB. YOU SAY NOTHING.
+                    </p>
+                    <p class="case__context">HOW DOES THAT FEEL?</p>
+                </div>
+                <div class="case__options">
+                    <button class="case__option" data-case="03" data-value="small">
+                        <div class="case__option-inner">
+                            <svg preserveAspectRatio="none" viewBox="0 0 386 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.48 102.181H2.1V2.38938H50.68V20.0989H25.48V42.3061H48.86V59.875H25.48V102.181Z" fill="white"/>
+                                <path d="M79.6589 84.6121H105.839V102.181H56.2789V2.38938H104.859V19.9583H79.6589V42.025H103.039V59.5939H79.6589V84.6121Z" fill="white"/>
+                                <path d="M136.162 84.6121H162.342V102.181H112.782V2.38938H161.362V19.9583H136.162V42.025H159.542V59.5939H136.162V84.6121Z" fill="white"/>
+                                <path d="M169.285 102.181V2.38938H192.665V81.9417H216.605V102.181H169.285Z" fill="white"/>
+                                <path d="M244.93 102.181H221.55V2.38938H244.93V102.181Z" fill="white"/>
+                                <path d="M253.307 102.181V2.38938H277.947L291.527 42.7277C292.787 47.3659 294.327 52.1447 295.447 56.5018H295.867C295.587 49.6148 295.447 42.7277 295.447 35.9812V2.38938H315.607V102.181H293.487L277.947 56.6423C276.267 51.3014 274.727 46.3821 273.607 41.6033H273.187C273.467 47.9281 273.607 54.3935 273.607 61.14V102.181H253.307Z" fill="white"/>
+                                <path d="M346.709 104.57C330.889 104.57 322.629 93.0452 322.629 71.5408V34.2946C322.629 12.5091 334.249 0 354.969 0C374.149 0 385.489 9.27642 385.489 26.2832V34.1541L361.549 38.3706V27.1265C361.549 20.38 359.309 17.0068 354.549 17.0068C349.229 17.0068 346.709 21.5044 346.709 30.6403V72.8058C346.709 81.8011 349.509 86.7204 355.389 86.7204C360.569 86.7204 363.229 82.6444 363.229 75.8979V63.951H354.269V46.5226H385.489V102.181H368.689L367.849 87.0015C365.889 97.4023 358.749 104.57 346.709 104.57Z" fill="white"/>
+                                <path d="M30.38 214C11.2 214 0 202.615 0 186.171V178.3L23.8 173.802V186.311C23.8 192.496 25.76 196.572 30.52 196.572C35.28 196.572 36.96 192.777 36.96 188.701V184.344C36.96 179.565 35.98 177.035 30.66 173.802L14.7 164.245C4.34 158.06 0.84 150.892 0.84 139.929V134.588C0.84 116.879 14.84 109.43 30.52 109.43C48.58 109.43 60.76 116.035 60.76 135.994V143.303L37.38 147.519V135.432C37.38 130.793 35.7 126.858 30.52 126.858C26.46 126.858 24.22 129.81 24.22 133.464V137.68C24.22 141.756 26.74 145.13 30.52 147.378L46.34 156.795C57.68 163.542 60.76 170.007 60.76 180.268V189.544C60.76 203.178 50.26 214 30.38 214Z" fill="white"/>
+                                <path d="M67.7633 211.611V111.819H97.8633L104.163 153.844C104.863 159.044 105.563 165.088 105.563 168.461H106.123C106.123 165.088 106.823 159.044 107.523 153.844L113.683 111.819H143.783V211.611H124.043V167.477C124.043 158.482 124.043 149.065 124.463 140.351H123.903C123.483 144.567 122.923 148.925 122.223 153.422L113.123 211.611H98.2833L88.9033 153.422C88.2033 148.925 87.6433 144.286 87.3633 140.351H86.6633C87.2233 149.065 87.2233 158.482 87.2233 167.477V211.611H67.7633Z" fill="white"/>
+                                <path d="M146.557 211.611L165.457 111.819H196.397L215.437 211.611H191.917L189.117 191.09H172.737L169.937 211.611H146.557ZM174.977 174.505H186.877L182.817 144.567L181.137 130.934H180.717L179.037 144.567L174.977 174.505Z" fill="white"/>
+                                <path d="M218.23 211.611V111.819H247.35C270.03 111.819 278.85 122.36 278.85 139.508V143.584C278.85 154.968 274.51 162.418 267.65 166.212L280.95 211.611H256.59L247.21 171.975H241.61V211.611H218.23ZM241.61 157.639H245.67C252.53 157.639 254.77 153.703 254.77 145.13V138.102C254.77 130.231 252.39 127.42 245.67 127.42H241.61V157.639Z" fill="white"/>
+                                <path d="M299.954 211.611V131.496H281.334V111.819H341.814V131.496H323.194V211.611H299.954Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="case__result-percent hidden">—%</span>
+                    </button>
+
+                    <button class="case__option" data-case="03" data-value="smart">
+                        <div class="case__option-inner">
+                            <svg preserveAspectRatio="none" viewBox="0 0 387 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.5804 102.181H2.10828V2.38938H50.8797V20.0989H25.5804V42.3061H49.0525V59.875H25.5804V102.181Z" fill="white"/>
+                                <path d="M79.9728 84.6121H106.256V102.181H56.5007V2.38938H105.272V19.9583H79.9728V42.025H103.445V59.5939H79.9728V84.6121Z" fill="white"/>
+                                <path d="M136.699 84.6121H162.982V102.181H113.226V2.38938H161.998V19.9583H136.699V42.025H160.171V59.5939H136.699V84.6121Z" fill="white"/>
+                                <path d="M169.952 102.181V2.38938H193.424V81.9417H217.459V102.181H169.952Z" fill="white"/>
+                                <path d="M245.895 102.181H222.423V2.38938H245.895V102.181Z" fill="white"/>
+                                <path d="M254.305 102.181V2.38938H279.042L292.676 42.7277C293.941 47.3659 295.487 52.1447 296.611 56.5018H297.033C296.752 49.6148 296.611 42.7277 296.611 35.9812V2.38938H316.851V102.181H294.644L279.042 56.6423C277.356 51.3014 275.81 46.3821 274.685 41.6033H274.264C274.545 47.9281 274.685 54.3935 274.685 61.14V102.181H254.305Z" fill="white"/>
+                                <path d="M348.075 104.57C332.193 104.57 323.9 93.0452 323.9 71.5408V34.2946C323.9 12.5091 335.566 0 356.368 0C375.623 0 387.008 9.27642 387.008 26.2832V34.1541L362.974 38.3706V27.1265C362.974 20.38 360.725 17.0068 355.946 17.0068C350.605 17.0068 348.075 21.5044 348.075 30.6403V72.8058C348.075 81.8011 350.886 86.7204 356.789 86.7204C361.99 86.7204 364.66 82.6444 364.66 75.8979V63.951H355.665V46.5226H387.008V102.181H370.142L369.298 87.0015C367.331 97.4023 360.163 104.57 348.075 104.57Z" fill="white"/>
+                                <path d="M30.4997 214C11.2441 214 0 202.615 0 186.171V178.3L23.8938 173.802V186.311C23.8938 192.496 25.8615 196.572 30.6403 196.572C35.419 196.572 37.1056 192.777 37.1056 188.701V184.344C37.1056 179.565 36.1218 177.035 30.7808 173.802L14.7579 164.245C4.3571 158.06 0.84331 150.892 0.84331 139.929V134.588C0.84331 116.879 14.8985 109.43 30.6403 109.43C48.7714 109.43 60.9994 116.035 60.9994 135.994V143.303L37.5273 147.519V135.432C37.5273 130.793 35.8407 126.858 30.6403 126.858C26.5643 126.858 24.3154 129.81 24.3154 133.464V137.68C24.3154 141.756 26.8454 145.13 30.6403 147.378L46.5226 156.795C57.9073 163.542 60.9994 170.007 60.9994 180.268V189.544C60.9994 203.178 50.4581 214 30.4997 214Z" fill="white"/>
+                                <path d="M68.0303 211.611V111.819H98.2489L104.574 153.844C105.277 159.044 105.979 165.088 105.979 168.461H106.541C106.541 165.088 107.244 159.044 107.947 153.844L114.131 111.819H144.35V211.611H124.532V167.477C124.532 158.482 124.532 149.065 124.954 140.351H124.392C123.97 144.567 123.408 148.925 122.705 153.422L113.569 211.611H98.6706L89.2536 153.422C88.5509 148.925 87.9887 144.286 87.7076 140.351H87.0048C87.567 149.065 87.567 158.482 87.567 167.477V211.611H68.0303Z" fill="white"/>
+                                <path d="M147.135 211.611L166.109 111.819H197.171L216.286 211.611H192.673L189.862 191.09H173.418L170.607 211.611H147.135ZM175.667 174.505H187.613L183.537 144.567L181.851 130.934H181.429L179.743 144.567L175.667 174.505Z" fill="white"/>
+                                <path d="M219.09 211.611V111.819H242.563V191.371H266.597V211.611H219.09Z" fill="white"/>
+                                <path d="M271.561 211.611V111.819H295.033V191.371H319.068V211.611H271.561Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="case__result-percent hidden">—%</span>
+                    </button>
+                </div>
+                <div class="case__scroll-indicator hidden">
+                    <span>Scroll</span>
+                </div>
+            </div>
+        </section>
+
+        
+        <section class="case__data hidden" data-case="03">
+            <img src="img/case-03-pic.jpg" alt="" aria-hidden="true" />
+            <div class="case__data-header">
+                <span class="case__number">CASE 3 OF 4</span>
+                <span class="case__data-title">SEXUAL HARASSMENT <br>AT WORK</span>
+            </div>
+            <div class="case__data-scroll">
+                <div class="case__data-row">
+                    <span class="case__stat">30.8<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <button class="btn--play" data-case="03" data-stat="30.8" aria-label="See proportion"></button>
+                        <p class="case__paragraph strong">1 in 3 women (30.8%) in Europe has experienced sexual harassment at work in their lifetime.</p>
+                    </div>
+                </div>
+                <div class="case__data-row">
+                    <span class="case__stat">41.6<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <button class="btn--play" data-case="03" data-stat="41.6" aria-label="See proportion"></button>
+                        <div>
+                            <p class="case__paragraph strong">But for women between 18 and 29, it rises to 41.6%.</p>
+                            <p class="case__paragraph">It's not always obvious. Sometimes it's a comment. A look. A joke everyone laughs at.</p>
+                            <p class="case__paragraph">And most of them smiled. <br>Stayed quiet. <br>Afraid to lose the job.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gradient--blur gradient--black"></div>
+
+            <div class="case__data-visual hidden" data-stat="30.8">
+                <video autoplay loop muted playsinline>
+                    <source src="video/unsilenced_video-harassment-work.mp4" type="video/mp4">
+                </video>
+                <p class="case__visual-caption">Look at the women <br>in an everyday work situation.<br>
+                <span class="strong">30.8% have experienced <br>sexual harassment at work.<br></span>
+                We marked them.</p>
+            </div>
+            <div class="case__data-visual hidden" data-stat="41.6">
+                <video autoplay loop muted playsinline>
+                    <source src="video/unsilenced_video-harassment-work.mp4" type="video/mp4">
+                </video>
+                <p class="case__visual-caption">Look at the women <br>in an everyday work situation.<br>
+                <span class="strong">41.6% of women between 18 and 29 <br>have experienced sexual harassment at work.<br></span>
+                We marked them.</p>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+            SECTION: CASE 04
+            Women's experience of violence by any perpetrator
+        ============================================================ -->
+        <section class="case" id="case-04">
+            <div class="case__question">
+                <div class="case__header">
+                    <span class="case__number">CASE 4 OF 4</span>
+                    <p class="case__context">
+                        THE WOMEN YOU GREW UP WITH. YOUR FRIENDS. YOUR FAMILY. DO YOU KNOW WHAT THEY'VE BEEN THROUGH?
+                    </p>
+                    <p class="case__context">HOW DOES THAT FEEL?</p>
+                </div>
+                <div class="case__options">
+                    <button class="case__option" data-case="04" data-value="fully">
+                        <div class="case__option-inner">
+                            <svg preserveAspectRatio="none" viewBox="0 0 285 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M21.3639 102.181V69.8542L0 2.38938H24.1749L31.0619 34.1541C32.1863 39.2139 32.7485 43.9927 33.0297 49.1931H33.4513C33.7324 43.9927 34.2946 39.2139 35.2785 34.1541L41.6033 2.38938H65.7782L44.836 69.8542V102.181H21.3639Z" fill="white"/>
+                                <path d="M91.9966 84.6121H118.28V102.181H68.5244V2.38938H117.296V19.9583H91.9966V42.025H115.469V59.5939H91.9966V84.6121Z" fill="white"/>
+                                <path d="M153.642 104.57C134.386 104.57 123.142 93.1858 123.142 76.7412V68.8703L147.036 64.3727V76.8818C147.036 83.0661 149.003 87.1421 153.782 87.1421C158.561 87.1421 160.248 83.3472 160.248 79.2712V74.9141C160.248 70.1353 159.264 67.6054 153.923 64.3727L137.9 54.8152C127.499 48.6309 123.985 41.4628 123.985 30.4997V25.1588C123.985 7.44925 138.04 0 153.782 0C171.913 0 184.141 6.60594 184.141 26.5643V33.873L160.669 38.0895V26.0021C160.669 21.3639 158.983 17.4284 153.782 17.4284C149.706 17.4284 147.457 20.38 147.457 24.0343V28.2509C147.457 32.3269 149.987 35.7001 153.782 37.949L169.665 47.3659C181.049 54.1124 184.141 60.5778 184.141 70.8381V80.1145C184.141 93.748 173.6 104.57 153.642 104.57Z" fill="white"/>
+                                <path d="M187.806 113.987C194.271 111.598 195.677 108.506 195.677 102.743V102.181H187.665V76.179H209.451V100.354C209.451 113.004 204.672 121.718 193.428 125.513L187.806 113.987Z" fill="white"/>
+                                <path d="M29.0942 211.611H5.62207V111.819H54.3935V129.528H29.0942V151.736H52.5663V169.305H29.0942V211.611Z" fill="white"/>
+                                <path d="M59.7235 111.819H83.1956V185.187C83.1956 191.09 85.7256 194.323 90.3638 194.323C95.002 194.323 97.6724 191.09 97.6724 185.187V111.819H121.004V186.03C121.004 203.459 110.041 214 90.3638 214C70.546 214 59.7235 203.599 59.7235 186.03V111.819Z" fill="white"/>
+                                <path d="M128.682 211.611V111.819H152.154V191.371H176.188V211.611H128.682Z" fill="white"/>
+                                <path d="M181.152 211.611V111.819H204.625V191.371H228.659V211.611H181.152Z" fill="white"/>
+                                <path d="M239.894 211.611V179.284L218.53 111.819H242.705L249.592 143.584C250.717 148.643 251.279 153.422 251.56 158.623H251.982C252.263 153.422 252.825 148.643 253.809 143.584L260.134 111.819H284.309L263.366 179.284V211.611H239.894Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="case__result-percent hidden">—%</span>
+                    </button>
+
+                    <button class="case__option" data-case="04" data-value="hopeso">
+                        <div class="case__option-inner">
+                            <svg preserveAspectRatio="none" viewBox="0 0 307 214" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M25.48 102.181H2.1V2.38938H25.48V102.181Z" fill="white"/>
+                                <path d="M112.032 2.38938V102.181H88.6517V60.4372H74.0917V102.181H50.7117V2.38938H74.0917V42.5872H88.6517V2.38938H112.032Z" fill="white"/>
+                                <path d="M151.557 104.57C131.397 104.57 119.077 92.7641 119.077 71.6814V32.8891C119.077 11.8063 131.397 0 151.557 0C171.717 0 184.037 11.8063 184.037 32.8891V71.6814C184.037 92.7641 171.717 104.57 151.557 104.57ZM151.557 86.5799C156.877 86.5799 159.957 82.5039 159.957 74.7735V29.797C159.957 22.0666 156.877 17.9906 151.557 17.9906C146.237 17.9906 143.157 22.0666 143.157 29.797V74.7735C143.157 82.5039 146.237 86.5799 151.557 86.5799Z" fill="white"/>
+                                <path d="M214.442 102.181H191.062V2.38938H221.442C241.322 2.38938 251.542 11.3847 251.682 28.8131V36.9651C251.682 55.6585 241.322 65.7782 222.002 65.7782H214.442V102.181ZM214.442 49.6148H218.922C225.082 49.6148 227.602 45.9604 227.602 36.5434V29.3753C227.602 21.3639 225.082 18.1312 218.922 18.1312H214.442V49.6148Z" fill="white"/>
+                                <path d="M280.652 84.6121H306.832V102.181H257.272V2.38938H305.852V19.9583H280.652V42.025H304.032V59.5939H280.652V84.6121Z" fill="white"/>
+                                <path d="M30.38 214C11.2 214 0 202.615 0 186.171V178.3L23.8 173.802V186.311C23.8 192.496 25.76 196.572 30.52 196.572C35.28 196.572 36.96 192.777 36.96 188.701V184.344C36.96 179.565 35.98 177.035 30.66 173.802L14.7 164.245C4.34 158.06 0.84 150.892 0.84 139.929V134.588C0.84 116.879 14.84 109.43 30.52 109.43C48.58 109.43 60.76 116.035 60.76 135.994V143.303L37.38 147.519V135.432C37.38 130.793 35.7 126.858 30.52 126.858C26.46 126.858 24.22 129.81 24.22 133.464V137.68C24.22 141.756 26.74 145.13 30.52 147.378L46.34 156.795C57.68 163.542 60.76 170.007 60.76 180.268V189.544C60.76 203.178 50.26 214 30.38 214Z" fill="white"/>
+                                <path d="M98.8433 214C78.6833 214 66.3633 202.194 66.3633 181.111V142.319C66.3633 121.236 78.6833 109.43 98.8433 109.43C119.003 109.43 131.323 121.236 131.323 142.319V181.111C131.323 202.194 119.003 214 98.8433 214ZM98.8433 196.009C104.163 196.009 107.243 191.933 107.243 184.203V139.227C107.243 131.496 104.163 127.42 98.8433 127.42C93.5233 127.42 90.4433 131.496 90.4433 139.227V184.203C90.4433 191.933 93.5233 196.009 98.8433 196.009Z" fill="white"/>
+                                <path d="M155.155 185.609V211.611H133.455V185.609H155.155Z" fill="white"/>
+                                <path d="M180.76 185.609V211.611H159.06V185.609H180.76Z" fill="white"/>
+                                <path d="M206.364 185.609V211.611H184.664V185.609H206.364Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <span class="case__result-percent hidden">—%</span>
+                    </button>
+                </div>
+                <div class="case__scroll-indicator hidden">
+                    <span>Scroll</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- DATA 04 -->
+        <section class="case__data hidden" data-case="04">
+            <img src="img/case-04-pic.jpg" alt="" aria-hidden="true" />
+            <div class="case__data-header">
+                <span class="case__number">CASE 4 OF 4</span>
+                <span class="case__data-title">WOMEN'S EXPERIENCE OF <br>VIOLENCE BY ANY PERPETRATOR</span>
+            </div>
+            <div class="case__data-scroll">
+                <div class="case__data-row">
+                    <span class="case__stat">30.7<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <button class="btn--play" data-case="04" data-stat="30.7" aria-label="See proportion"></button>
+                        <div>
+                            <p class="case__paragraph strong">1 in 3 women (30.7%) in Europe has experienced physical or sexual violence in their lifetime.</p>
+                            <p class="case__paragraph">By anyone. A partner. A stranger. Someone they trusted.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="case__data-row">
+                    <span class="case__stat">17.2<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <button class="btn--play" data-case="04" data-stat="17.2" aria-label="See proportion"></button>
+                        <p class="case__paragraph strong">17.2% have experienced sexual violence including rape.</p>
+                    </div>
+                </div>
+                <div class="case__data-row">
+                    <span class="case__stat">13.9<sup>%</sup></span>
+                    <div class="case__data-row-content">
+                        <p class="case__paragraph">And of all of them, only 13.9% reported it to the police.<br>Most of them never told anyone.</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="gradient--blur gradient--black"></div>
+
+            <div class="case__data-visual hidden" data-stat="30.7">
+                <img src="img/visual-04-30.jpg" alt="" aria-hidden="true" />
+                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
+                <span class="strong">30.7% have experienced <br>physical or sexual violence.<br></span>
+                Someone's daughter, friend, sister.<br>We marked them.</p>
+            </div>
+            <div class="case__data-visual hidden" data-stat="17.2">
+                <img src="img/visual-04-17.jpg" alt="" aria-hidden="true" />
+                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
+                <span class="strong">17.2% have experienced <br>sexual violence including rape.<br></span>
+                Someone's daughter, friend, sister.<br>We marked them.</p>
+            </div>
+        </section>
+
+        <!-- GLOBAL FOOTER — fixed, always on top -->
+        <div id="case-footer">
+            <button class="btn--back" id="footer-back"></button>
+            <button class="btn" id="footer-next">
+                Next case
+                <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="black" stroke-width="2"/>
+                    <path d="M0.000235891 11.0999L19.435 11.1002" stroke="black" stroke-width="2"/>
+                </svg>
+            </button>
+        </div>
+
+        
+        <!-- ============================================================
+            SECTION: CLOSING
+        ============================================================ -->
+        <section id="closing">
+
+            <!-- CLOSING 01 -->
+            <div class="closing__screen" id="closing-01">
+                <p class="closing__text">Did you know violence<br>could look like this?</p>
+            </div>
+
+            <!-- CLOSING 02 -->
+            <div class="closing__screen" id="closing-02">
+                <div class="closing__content">
+                    <p class="closing__text">114,000 women answered<br>these questions in real life.*</p>
+                    <p class="closing__text">Not as an experience.<br>Not as a website.</p>
+                    <p class="closing__text">As their reality.</p>
+                    <p class="closing__text">Now you know the numbers.<br>The question is what<br>you do with them.</p>
+                    <p class="closing__footnote">*FRA, EIGE, Eurostat (2024), EU gender-based violence survey - Key results. Experiences of women in the EU-27, Publications Office of the European Union, Luxembourg.</p>
+                </div>
+            </div>
+
+            <div class="closing__footer">
+                <button class="btn" id="closing-next" disabled>
+                    Next
+                    <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="black" stroke-width="2"/>
+                        <path d="M0.000235891 11.0999L19.435 11.1002" stroke="black" stroke-width="2"/>
+                    </svg>
+                </button>
+            </div>
+
+        </section>
+
+
+       <!-- ============================================================
+            SECTION: MENU CLOSING
+        ============================================================ -->
+        <section id="menu-closing">
+            <a href="https://fra.europa.eu/en/publication/2026/eu-gender-based-violence-survey-evidence" target="_blank" class="menu-closing__item">
+                <span class="menu-closing__title">Explore the full data</span>
+                <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="white" stroke-width="2"/>
+                    <path d="M0.000235891 11.0999L19.435 11.1002" stroke="white" stroke-width="2"/>
+                </svg>
+            </a>
+            <!-- <div class="menu-closing__item">
+                <span class="menu-closing__title">Share it</span>
+                <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="white" stroke-width="2"/>
+                    <path d="M0.000235891 11.0999L19.435 11.1002" stroke="white" stroke-width="2"/>
+                </svg>
+            </div> -->
+            <div class="menu-closing__item js-open-contact">
+                <span class="menu-closing__title">Get help or  contact us</span>
+                <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="white" stroke-width="2"/>
+                    <path d="M0.000235891 11.0999L19.435 11.1002" stroke="white" stroke-width="2"/>
+                </svg>
+            </div>
+        </section>
+
+
+        <!-- ============================================================
+            SECTION: CONTACT
+        ============================================================ -->
+        <section id="contact">
+
+            <!-- Screen 01 - main -->
+            <div class="contact__screen" id="contact-01">
+                <div class="contact__content">
+                    <p class="contact__text">Hi, before we do,<br>a couple of questions.</p>
+                </div>
+                <div class="contact__option--wrapper">
+                    <button class="contact__option" id="contact-support">
+                        I need support / help
+                    </button>
+                    <button class="contact__option" id="contact-us">
+                        Contact us
+                    </button>
+                </div>
+                <div class="contact__footer">
+                    <button class="btn--back--white" id="contact-back"></button>
+                </div>
+            </div>
+
+            <!-- Screen 02 - contact form -->
+            <div class="contact__screen" id="contact-form">
+                <div class="contact__content">
+                    <p class="contact__text">Contact us</p>
+                </div>
+                <div class="contact__form">
+                    <input class="contact__input" type="text" placeholder="Your name*" required />
+                    <input class="contact__input" type="email" placeholder="Your email*" required />
+                    <textarea class="contact__textarea" placeholder="Your message*" required></textarea>
+                    <p class="required__text">*Required fields.</p>
+                </div>
+                <div class="contact__footer">
+                    <button class="btn--back--lined" id="contact-form-back"></button>
+                    <button class="btn" id="contact-form-send">
+                        Send it
+                    </button>
+                </div>
+            </div>
+
+            <!-- Screen 03 - contact form "sent" -->
+            <div class="contact__screen" id="contact-sent">
+                <div class="contact__sent">
+                    <p class="contact__sent-text">You have successfully sent your message. We will be back to you as soon as possible. Thank you.</p>
+                    <button class="contact__sent-again" id="contact-send-again">Send another message</button>
+                </div>
+                <div class="contact__footer">
+                    <button class="btn--back--lined" id="contact-sent-back"></button>
+                </div>
+            </div>
+
+            <!-- Screen 04 - Get support -->
+            <div class="contact__screen" id="contact-support-screen">
+                <div class="contact__content">
+                    <p class="contact__text">These are the numbers<br>you can call if you're in Europe.<br>Free of charge, available 24h.</p>
+                </div>
+
+                <div class="contact__search">
+                    <input class="contact__search-input" type="text" placeholder="Search country..." id="contact-search-input" />
+                </div>
+
+                <div class="contact__support-list">
+                    <a href="tel:116016" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">EU — <br>Most countries</span>
+                            <span class="contact__support-desc">Common EU helpline</span>
+                        </div>
+                        <span class="contact__support-number">116 016</span>
+                    </a>
+                    <a href="tel:08002225550" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Austria</span>
+                            <span class="contact__support-desc">Frauenhelpline</span>
+                        </div>
+                        <span class="contact__support-number">0800 222 555</span>
+                    </a>
+                    <a href="tel:08003000300" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Belgium</span>
+                            <span class="contact__support-desc">Violence conjugale</span>
+                        </div>
+                        <span class="contact__support-number">0800 30 030</span>
+                    </a>
+                    <a href="tel:1888" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Denmark</span>
+                            <span class="contact__support-desc">Domestic violence helpline</span>
+                        </div>
+                        <span class="contact__support-number">1888</span>
+                    </a>
+                    <a href="tel:116006" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Finland</span>
+                            <span class="contact__support-desc">Nollalinja</span>
+                        </div>
+                        <span class="contact__support-number">116 006</span>
+                    </a>
+                    <a href="tel:3919" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">France</span>
+                            <span class="contact__support-desc">Violences femmes info</span>
+                        </div>
+                        <span class="contact__support-number">3919</span>
+                    </a>
+                    <a href="tel:+4901160160" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Germany</span>
+                            <span class="contact__support-desc">Hilfetelefon</span>
+                        </div>
+                        <span class="contact__support-number">116 016</span>
+                    </a>
+                    <a href="tel:15900" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Greece</span>
+                            <span class="contact__support-desc">SOS helpline</span>
+                        </div>
+                        <span class="contact__support-number">15900</span>
+                    </a>
+                    <a href="tel:18003419000" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Ireland</span>
+                            <span class="contact__support-desc">Women's Aid</span>
+                        </div>
+                        <span class="contact__support-number">1800 341 900</span>
+                    </a>
+                    <a href="tel:1522" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Italy</span>
+                            <span class="contact__support-desc">Antiviolenza Donna</span>
+                        </div>
+                        <span class="contact__support-number">1522</span>
+                    </a>
+                    <a href="tel:08002000" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Netherlands</span>
+                            <span class="contact__support-desc">Veilig Thuis</span>
+                        </div>
+                        <span class="contact__support-number">0800 2000</span>
+                    </a>
+                    <a href="tel:80012000 2" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Poland</span>
+                            <span class="contact__support-desc">Niebieska Linia</span>
+                        </div>
+                        <span class="contact__support-number">8001 200 02</span>
+                    </a>
+                    <a href="tel:800202148" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Portugal</span>
+                            <span class="contact__support-desc">Violência doméstica</span>
+                        </div>
+                        <span class="contact__support-number">800 202 148</span>
+                    </a>
+                    <a href="tel:0800500333" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Romania</span>
+                            <span class="contact__support-desc">Helpline violență</span>
+                        </div>
+                        <span class="contact__support-number">0800 500 333</span>
+                    </a>
+                    <a href="tel:08002122120" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Slovakia</span>
+                            <span class="contact__support-desc">Národná linka</span>
+                        </div>
+                        <span class="contact__support-number">0800 212 212</span>
+                    </a>
+                    <a href="tel:08001155" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Slovenia</span>
+                            <span class="contact__support-desc">SOS helpline</span>
+                        </div>
+                        <span class="contact__support-number">080 11 55</span>
+                    </a>
+                    <a href="tel:016" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Spain</span>
+                            <span class="contact__support-desc">Violencia de género</span>
+                        </div>
+                        <span class="contact__support-number">016</span>
+                    </a>
+                    <a href="tel:020505050" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">Sweden</span>
+                            <span class="contact__support-desc">Kvinnofridslinjen</span>
+                        </div>
+                        <span class="contact__support-number">020 50 50 50</span>
+                    </a>
+                    <a href="tel:08082000247" class="contact__support-item">
+                        <div>
+                            <span class="contact__support-name">UK — <br>England</span>
+                            <span class="contact__support-desc">National Domestic Abuse Helpline</span>
+                        </div>
+                        <span class="contact__support-number">0808 2000 247</span>
+                    </a>
+                </div>
+                <div class="contact__footer">
+                    <button class="btn--back--white" id="contact-support-back"></button>
+                </div>
+
+                <div class="gradient--blur gradient--black"></div>
+            </div>
+
+        </section>
+
+
+
+        <!-- GSAP -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/ScrollTrigger.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/SplitText.min.js"></script>
+
+        <!-- ARCHIVO JS ANIMACION -->
+        <script src="js/animations.js"></script>
+        
         <!-- ARCHIVO JS PRINCIPAL -->
         <script src="js/main.js"></script>
- 
+
+    
     </body>
 </html>
