@@ -296,7 +296,10 @@
             font-weight: 200;
             text-align: center;
             justify-content: center;
+            padding-left: 0;
+            padding-right: 0;
         }
+
         .esterisc {opacity:1}
 
         .intro__subtitle--footnote {
@@ -1119,7 +1122,6 @@
         opacity: 0.7;
         text-decoration: underline;
         text-underline-offset: 3px;
-        /* cursor: pointer; */
         text-align: left;
         padding: 0;
     }
@@ -1177,7 +1179,6 @@
         border-top: 1px solid rgba(255, 255, 255, 0.15);
         text-decoration: none;
         color: var(--color-white);
-        /* cursor: pointer; */
 
         &:first-of-type {
             border-top: none;
@@ -1225,11 +1226,7 @@
         .contact__option--wrapper {padding-inline: 28vw; top: 45vh;}
         .contact__content {margin-top: 6vh;}
         .contact__sent {padding-inline: 28vw;}
-        #contact-send-again {
-            cursor: pointer;
-            &:hover {opacity: 0.5;}
-        }
-
+        
         .contact__option {
             cursor: pointer;
             transition: all 0.3s ease;
@@ -1240,5 +1237,8 @@
                 font-weight: 500;
             }
         }
+
+        .contact__footer {margin-top: var(--spacing-m);}
+        #contact-send-again {cursor: pointer; &:hover {opacity: 0.5;}}
     }
 }

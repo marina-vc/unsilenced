@@ -1,4 +1,6 @@
-/* VARIABLES */
+/* ============================================================
+  VARIABLES
+============================================================ */
 
 :root {
  /* Colors --------------------------*/
@@ -7,7 +9,6 @@
 
  /* Font Families --------------------------*/
    --font-america: "America", Arial, sans-serif;
-   --font-america-cnd: "America Cnd", Arial, sans-serif;
    --font-america-cmp: "America Cmp", Arial, sans-serif;
 
  /* Font sizes --------------------------*/

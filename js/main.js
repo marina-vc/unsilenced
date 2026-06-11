@@ -1,5 +1,5 @@
 // ============================================================
-// main.js — Core logic: navigation, voting, etc
+// main.js — Main logic: navigation, voting, etc
 // ============================================================
 
 document.addEventListener("DOMContentLoaded", () => {
@@ -70,7 +70,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     const caseVotes = votes[caseId];
                     const total = Object.values(caseVotes).reduce((a, b) => a + b, 0);
 
-                    // Actualitza el contador
+                    // Update counter
                     const countEl = document.querySelector(`.case__response-count[data-case="${caseId}"]`);
                     if (countEl) countEl.textContent = total + " responses";
 
@@ -231,7 +231,7 @@ document.addEventListener("DOMContentLoaded", () => {
             closingNext.setAttribute("disabled", "");
             closingNext.style.opacity = "0.3";
 
-            document.getElementById("intro").style.display = "none"; // ← oculta intro
+            document.getElementById("intro").style.display = "none";
             show(closingEl);
             gsap.set(closing01, { opacity: 0 });
             closing01.style.display = "flex";
@@ -259,7 +259,7 @@ document.addEventListener("DOMContentLoaded", () => {
         window.fadeOut(document.getElementById("closing"), 0.6, () => {
             hide(document.getElementById("closing"));
             const menuClosingEl = document.getElementById("menu-closing");
-            document.getElementById("intro").style.display = "none"; // ← oculta intro
+            document.getElementById("intro").style.display = "none";
             gsap.set(menuClosingEl, { opacity: 0 });
             show(menuClosingEl);
             window.fadeIn(menuClosingEl);

@@ -109,13 +109,10 @@
     border: 1px solid var(--color-white);
 }
 @media (min-width: 1024px) {
-    .btn--back--lined {cursor: pointer; transition: all 0.3s ease;}
-    .btn--back--lined:hover{
-        opacity: 0.75; background-color: white;
-        svg {
-            fill: black;
-            stroke: black;
-        }
+    .btn--back--lined { cursor: pointer; transition: all 0.3s ease; }
+    .btn--back--lined:hover {
+        background-color: white;
+        background-image: url("data:image/svg+xml,%3Csvg width='21' height='23' viewBox='0 0 21 23' fill='white' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M12.0762 22.0317L1.41399 11.3694L12.0762 0.707181' stroke='black' stroke-width='2'/%3E%3Cpath d='M1.14428 11.6385L20.579 11.6387' stroke='black' stroke-width='2'/%3E%3C/svg%3E");
     }
 }
 
@@ -177,6 +174,10 @@
     background: linear-gradient(to bottom, transparent 0%, var(--color-black) 100%);
 }
 
+@media (min-width: 1024px) {
+    .gradient--black {height: 30vh;}
+}
+
 /* Blur gradient — bottom */
 .gradient--blur {
     position: absolute;
@@ -191,4 +192,8 @@
     backdrop-filter: blur(30px);
     -webkit-mask-image: linear-gradient(to bottom, transparent 40px, black);
     mask-image: linear-gradient(to bottom, transparent 40px, black);
+}
+
+@media (min-width: 1024px) {
+    .gradient--blur{height: 30vh;}
 }

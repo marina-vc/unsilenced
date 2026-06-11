@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
-    // Hover spotlight — solo desktop
+    // Hover spotlight — desktop
     if (window.matchMedia("(min-width: 768px)").matches) {
         const wrapper = document.querySelector(".intro__video--wrapper");
         let currentHovered = null;
@@ -266,12 +266,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const delta = touchStartY - e.changedTouches[0].clientY;
         if (delta > 250) {
             triggered = true;
-            ggsap.set(introSubtitle, { y: 0, opacity: 1 });
+            gsap.set(introSubtitle, { y: 0, opacity: 1 });
             gsap.set(introScrollIndicator, { y: 0, opacity: 1 });
             gsap.set(introFootnote, { y: 0, opacity: 1 });
             tlBack.progress(0).pause();
-            gsap.set(allChars, { opacity: 0, filter: "blur(8px)", y: 4 }); // ← añade
-            gsap.set(bottom, { opacity: 0 }); // ← añade
+            gsap.set(allChars, { opacity: 0, filter: "blur(8px)", y: 4 });
+            gsap.set(bottom, { opacity: 0 });
             tlIntro.restart();
         } else {
             gsap.to(introSubtitle, { y: 0, opacity: 1, duration: 0.3 });
@@ -447,7 +447,7 @@ document.addEventListener("DOMContentLoaded", () => {
             if (triggered) return;
             const delta = touchStartY - e.touches[0].clientY;
             if (delta > 0) {
-                const progress = Math.min(delta / 300, 1);
+                const progress = Math.min(delta / 150, 1);
                 applyProgress(progress);
             }
         });
@@ -455,7 +455,7 @@ document.addEventListener("DOMContentLoaded", () => {
         questionEl.addEventListener("touchend", (e) => {
             if (triggered) return;
             const delta = touchStartY - e.changedTouches[0].clientY;
-            if (delta > 200) {
+            if (delta > 100) {
                 triggerTransition();
             } else {
                 resetProgress();
