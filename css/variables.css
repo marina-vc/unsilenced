@@ -31,3 +31,8 @@
    --spacing-xl: 80px;
    --spacing-xxl: 120px;
 }
+
+::selection {
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
