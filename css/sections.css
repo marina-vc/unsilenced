@@ -547,7 +547,7 @@
         }
 
         .case__number,
-        .case__context {font-size: var(--font-size-18);}
+        .case__context {font-size: var(--font-size-18); width: 70vw; max-width: 600px;}
 
         .case__options {
             min-height: 60dvh;
@@ -565,7 +565,6 @@
         }
     }
 }
-
 
 
 /* ============================================================

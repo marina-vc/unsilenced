@@ -130,7 +130,7 @@
 }
 @media (min-width: 1024px) {
     .btn--play {cursor: pointer; transition: all 0.3s ease;}
-    .btn--play{opacity: 0.75;}
+    .btn--play{opacity: 0.9;}
 }
 
 .btn--play::after {
@@ -150,10 +150,16 @@
 }
 
 @media (min-width: 1024px) {
-    .btn--play:hover{
-        cursor: pointer;
-        opacity: 0.6;
-        translate: scale (1.4)
+    .btn--play { cursor: pointer; transition: all 0.3s ease; }
+    
+    .btn--play:hover {
+        background-color: var(--color-black);
+    }
+
+    .btn--play:hover::after {
+        background-image: url("data:image/svg+xml,%3Csvg width='28' height='32' viewBox='0 0 28 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.314 15.7698L0.000120585 31.5394L0.000121964 0.000119923L27.314 15.7698Z' fill='white'/%3E%3C/svg%3E");
+        animation: none;
+        opacity: 1;
     }
 }
 
