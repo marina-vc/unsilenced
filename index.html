@@ -103,48 +103,44 @@
             Full screen image of eyes + title + subtitle + scroll indicator
         ============================================================ -->
         <section id="intro">
- 
             <div class="intro__video--wrapper">
-                <video class="intro__video" autoplay loop muted playsinline>
-                    <source src="video/intro-video-01.mp4" type="video/mp4">
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline preload="auto">
+                    <source src="video/intro-video-09.mp4" type="video/mp4">
                 </video>
-                <video class="intro__video" autoplay loop muted playsinline>
+                <video class="intro__video" autoplay loop muted playsinline preload="auto">
                     <source src="video/intro-video-02.mp4" type="video/mp4">
                 </video>
-                <video class="intro__video" autoplay loop muted playsinline>
-                    <source src="video/intro-video-03.mp4" type="video/mp4">
+                <video class="intro__video" autoplay loop muted playsinline preload="auto">
+                    <source src="video/intro-video-05.mp4" type="video/mp4">
                 </video>
-
-                <!-- Videos only shown in desktop -->
-                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
-                    <source src="video/intro-video-02.mp4" type="video/mp4">
-                </video>
-                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
-                    <source src="video/intro-video-03.mp4" type="video/mp4">
-                </video>
-                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline preload="auto">
                     <source src="video/intro-video-01.mp4" type="video/mp4">
                 </video>
-                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline preload="auto">
+                    <source src="video/intro-video-06.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline preload="auto">
+                    <source src="video/intro-video-08.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline preload="auto">
+                    <source src="video/intro-video-07.mp4" type="video/mp4">
+                </video>
+                <video class="intro__video" autoplay loop muted playsinline preload="auto">
                     <source src="video/intro-video-03.mp4" type="video/mp4">
                 </video>
-                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
-                    <source src="video/intro-video-01.mp4" type="video/mp4">
-                </video>
-                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline>
-                    <source src="video/intro-video-02.mp4" type="video/mp4">
+                <video class="intro__video intro__video--desktop" autoplay loop muted playsinline preload="auto">
+                    <source src="video/intro-video-04.mp4" type="video/mp4">
                 </video>
             </div>
- 
+
             <div class="intro__content">
                 <p class="intro__subtitle">A data experience on <br>gender-based violence in Europe —<br><span class="strong">Answers from 114K women.<span class="esterisc">*</span></p>
                 <p class="intro__subtitle--footnote">*FRA, EIGE, Eurostat (2024), EU gender-based violence survey - Key results. Experiences of women in the EU-27, Publications Office of the European Union, Luxembourg.</p>
             </div>
- 
+
             <div class="intro__scroll-indicator gradient--black">
                 <span>Scroll to start</span>
             </div>
-
         </section>
  
 
@@ -181,6 +177,7 @@
                         YOUR PARTNER ALWAYS WANTS TO KNOW WHERE YOU ARE, AND GETS UPSET WHEN YOU MAKE PLANS WITHOUT HIM.
                     </p>
                     <p class="case__context">HOW ARE YOU FEELING?</p>
+                    <span class="case__response-count" data-case="01"></span>
                 </div>
                 <div class="case__options">
                     <button class="case__option" data-case="01" data-value="loved">
@@ -237,9 +234,9 @@
                     <span class="case__stat">31.8<sup>%</sup></span>
                     <div class="case__data-row-content">
                         <button class="btn--play" data-case="01" data-stat="31.8" aria-label="See proportion"></button>
-                        <div>
-                            <p class="case__paragraph strong">When psychological violence is included, that number rises to 31.8%. </p>
-                            <p class="case__paragraph">Controlling where you go. Monitoring who you talk to. Isolating you from the people you love.</p>
+                        <div class="case__paragraph">
+                            <p class="strong">When psychological violence is included, that number rises to 31.8%. </p>
+                            <p>Controlling where you go. Monitoring who you talk to. Isolating you from the people you love.</p>
                         </div>
                     </div>
                 </div>
@@ -248,10 +245,10 @@
                 <div class="case__data-row">
                     <span class="case__stat">14.6<sup>%</sup></span>
                     <div class="case__data-row-content">
-                        <div>
-                            <p class="case__paragraph strong">For most of them (14.6%),it happened more than once. </p>
-                            <p class="case__paragraph strong">And in the last 12 months alone, 5.3% of women across the EU lived through it. </p>
-                            <p class="case__paragraph">That's not the past. <br>That's now.</p>
+                        <div class="case__paragraph data__no--btn">
+                            <p class="strong">For most of them (14.6%), <br>it happened more than once. </p>
+                            <p class="strong">And in the last 12 months alone, 5.3% of women across the EU lived through it. </p>
+                            <p>That's not the past. <br>That's now.</p>
                         </div>
                     </div>
                 </div>
@@ -265,8 +262,8 @@
                 <video autoplay loop muted playsinline>
                     <source src="video/unsilenced-intimate-partner.mp4" type="video/mp4">
                 </video>
-                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
-                <span class="strong">17.7% have experienced <br>physical or sexual violence.<br></span>
+                <p class="case__visual-caption">Look at the women in an everyday situation.<br>
+                <span class="strong">17.7% have experienced physical or sexual violence.<br></span>
                 We marked them.</p>
             </div>
 
@@ -275,8 +272,8 @@
                 <video autoplay loop muted playsinline>
                     <source src="video/unsilenced-intimate-partner.mp4" type="video/mp4">
                 </video>
-                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
-                <span class="strong">31.8% have experienced <br>physical, sexual or psychological violence.<br></span>
+                <p class="case__visual-caption">Look at the women in an everyday situation.<br>
+                <span class="strong">31.8% have experienced physical, sexual or psychological violence.<br></span>
                 We marked them.</p>
             </div>
 
@@ -294,6 +291,7 @@
                         THEY ALWAYS SEEM TO BE AROUND. AT THE SAME PLACES. ONLINE. OFFLINE. YOU HAVEN'T TOLD THEM WHERE YOU'D BE.
                     </p>
                     <p class="case__context">HOW DOES THAT FEEL?</p>
+                    <span class="case__response-count" data-case="01"></span>
                 </div>
                 <div class="case__options">
                     <button class="case__option" data-case="02" data-value="exposed">
@@ -359,10 +357,10 @@
                     <span class="case__stat">20.2<sup>%</sup></span>
                     <div class="case__data-row-content">
                         <button class="btn--play" data-case="02" data-stat="20.2" aria-label="See proportion"></button>
-                        <div>
-                            <p class="case__paragraph strong">More than 1 in 5 women (20.2%) have experienced physical and/or sexual violence by someone other than a partner.</p>
-                            <p class="case__paragraph">Not a stranger. <br>Usually someone they knew.<br>Someone from their circle.</p>
-                            <p class="case__paragraph">Followed. Watched. Tracked. <br>Online and offline.</p>
+                        <div class="case__paragraph">
+                            <p class="strong">More than 1 in 5 women (20.2%) have experienced physical and/or sexual violence by someone other than a partner.</p>
+                            <p>Not a stranger. <br>Usually someone they knew.<br>Someone from their circle.</p>
+                            <p>Followed. Watched. Tracked. <br>Online and offline.</p>
                         </div>
                     </div>
                 </div>
@@ -371,10 +369,10 @@
                     <span class="case__stat">12.9<sup>%</sup></span>
                     <div class="case__data-row-content">
                         <button class="btn--play" data-case="02" data-stat="12.9" aria-label="See proportion"></button>
-                        <div>
-                            <p class="case__paragraph strong">12.9% have experienced sexual violence since the age of 15.</p>
-                            <p class="case__paragraph">3.8% have been raped — by someone other than a partner.</p>
-                            <p class="case__paragraph">And most of them never reported it.</p>
+                        <div class="case__paragraph">
+                            <p class="strong">12.9% have experienced sexual violence since the age of 15.</p>
+                            <p>3.8% have been raped — by someone other than a partner.</p>
+                            <p>And most of them never reported it.</p>
                         </div>
                     </div>
                 </div>
@@ -394,8 +392,8 @@
                 <video autoplay loop muted playsinline>
                     <source src="video/unsilenced-other-than-an-intimate-partner.mp4" type="video/mp4">
                 </video>
-                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
-                <span class="strong">12.9% have experienced <br>sexual violence since the age of 15.<br></span>
+                <p class="case__visual-caption">Look at the women in an everyday situation.<br>
+                <span class="strong">12.9% have experienced sexual violence since the age of 15.<br></span>
                 We marked them.</p>
             </div>
         </section>
@@ -480,10 +478,10 @@
                     <span class="case__stat">41.6<sup>%</sup></span>
                     <div class="case__data-row-content">
                         <button class="btn--play" data-case="03" data-stat="41.6" aria-label="See proportion"></button>
-                        <div>
-                            <p class="case__paragraph strong">But for women between 18 and 29, it rises to 41.6%.</p>
-                            <p class="case__paragraph">It's not always obvious. Sometimes it's a comment. A look. A joke everyone laughs at.</p>
-                            <p class="case__paragraph">And most of them smiled. <br>Stayed quiet. <br>Afraid to lose the job.</p>
+                        <div class="case__paragraph">
+                            <p class="strong">But for women between 18 and 29, it rises to 41.6%.</p>
+                            <p>It's not always obvious. Sometimes it's a comment. A look. A joke everyone laughs at.</p>
+                            <p>And most of them smiled. <br>Stayed quiet. <br>Afraid to lose the job.</p>
                         </div>
                     </div>
                 </div>
@@ -495,16 +493,16 @@
                 <video autoplay loop muted playsinline>
                     <source src="video/unsilenced_video-harassment-work.mp4" type="video/mp4">
                 </video>
-                <p class="case__visual-caption">Look at the women <br>in an everyday work situation.<br>
-                <span class="strong">30.8% have experienced <br>sexual harassment at work.<br></span>
+                <p class="case__visual-caption">Look at the women in an everyday work situation.<br>
+                <span class="strong">30.8% have experienced sexual harassment at work.<br></span>
                 We marked them.</p>
             </div>
             <div class="case__data-visual hidden" data-stat="41.6">
                 <video autoplay loop muted playsinline>
                     <source src="video/unsilenced_video-harassment-work.mp4" type="video/mp4">
                 </video>
-                <p class="case__visual-caption">Look at the women <br>in an everyday work situation.<br>
-                <span class="strong">41.6% of women between 18 and 29 <br>have experienced sexual harassment at work.<br></span>
+                <p class="case__visual-caption">Look at the women in an everyday work situation.<br>
+                <span class="strong">41.6% of women between 18 and 29 have experienced sexual harassment at work.<br></span>
                 We marked them.</p>
             </div>
         </section>
@@ -519,9 +517,10 @@
                 <div class="case__header">
                     <span class="case__number">CASE 4 OF 4</span>
                     <p class="case__context">
-                        THE WOMEN YOU GREW UP WITH. YOUR FRIENDS. YOUR FAMILY. DO YOU KNOW WHAT THEY'VE BEEN THROUGH?
+                        THE WOMEN YOU GREW UP WITH. YOUR FRIENDS. YOUR FAMILY.
                     </p>
-                    <p class="case__context">HOW DOES THAT FEEL?</p>
+                    <p class="case__context">DO YOU KNOW WHAT THEY'VE BEEN THROUGH?</p>
+                    <span class="case__response-count" data-case="01"></span>
                 </div>
                 <div class="case__options">
                     <button class="case__option" data-case="04" data-value="fully">
@@ -577,9 +576,9 @@
                     <span class="case__stat">30.7<sup>%</sup></span>
                     <div class="case__data-row-content">
                         <button class="btn--play" data-case="04" data-stat="30.7" aria-label="See proportion"></button>
-                        <div>
-                            <p class="case__paragraph strong">1 in 3 women (30.7%) in Europe has experienced physical or sexual violence in their lifetime.</p>
-                            <p class="case__paragraph">By anyone. A partner. A stranger. Someone they trusted.</p>
+                        <div class="case__paragraph">
+                            <p class="strong">1 in 3 women (30.7%) in Europe has experienced physical or sexual violence in their lifetime.</p>
+                            <p>By anyone. A partner. A stranger. Someone they trusted.</p>
                         </div>
                     </div>
                 </div>
@@ -593,7 +592,7 @@
                 <div class="case__data-row">
                     <span class="case__stat">13.9<sup>%</sup></span>
                     <div class="case__data-row-content">
-                        <p class="case__paragraph">And of all of them, only 13.9% reported it to the police.<br>Most of them never told anyone.</p>
+                        <p class="data__no--btn case__paragraph">And of all of them, only 13.9% reported it to the police.<br>Most of them never told anyone.</p>
                     </div>
                 </div>
             </div>
@@ -602,14 +601,14 @@
 
             <div class="case__data-visual hidden" data-stat="30.7">
                 <img src="img/visual-04-30.jpg" alt="" aria-hidden="true" />
-                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
-                <span class="strong">30.7% have experienced <br>physical or sexual violence.<br></span>
+                <p class="case__visual-caption">Look at the women in an everyday situation.<br>
+                <span class="strong">30.7% have experienced physical or sexual violence.<br></span>
                 Someone's daughter, friend, sister.<br>We marked them.</p>
             </div>
             <div class="case__data-visual hidden" data-stat="17.2">
                 <img src="img/visual-04-17.jpg" alt="" aria-hidden="true" />
-                <p class="case__visual-caption">Look at the women <br>in an everyday situation.<br>
-                <span class="strong">17.2% have experienced <br>sexual violence including rape.<br></span>
+                <p class="case__visual-caption">Look at the women in an everyday situation.<br>
+                <span class="strong">17.2% have experienced sexual violence including rape.<br></span>
                 Someone's daughter, friend, sister.<br>We marked them.</p>
             </div>
         </section>
@@ -672,13 +671,6 @@
                     <path d="M0.000235891 11.0999L19.435 11.1002" stroke="white" stroke-width="2"/>
                 </svg>
             </a>
-            <!-- <div class="menu-closing__item">
-                <span class="menu-closing__title">Share it</span>
-                <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.50293 0.707031L19.1651 11.3694L8.50293 22.0316" stroke="white" stroke-width="2"/>
-                    <path d="M0.000235891 11.0999L19.435 11.1002" stroke="white" stroke-width="2"/>
-                </svg>
-            </div> -->
             <div class="menu-closing__item js-open-contact">
                 <span class="menu-closing__title">Get help or  contact us</span>
                 <svg width="21" height="23" viewBox="0 0 21 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -897,6 +889,47 @@
         </section>
 
 
+        <!-- Firebase -->
+        <script type="module">
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-app.js";
+            import { getDatabase, ref, update, get } from "https://www.gstatic.com/firebasejs/10.12.0/firebase-database.js";
+
+            const firebaseConfig = {
+                apiKey: "AIzaSyCz9adEHfKyV4mEHP_EciAD-hLA8dy_qXg",
+                authDomain: "unsilenced-eac81.firebaseapp.com",
+                databaseURL: "https://unsilenced-eac81-default-rtdb.europe-west1.firebasedatabase.app",
+                projectId: "unsilenced-eac81",
+                storageBucket: "unsilenced-eac81.firebasestorage.app",
+                messagingSenderId: "357941679152",
+                appId: "1:357941679152:web:7caacaba155f20fdb249f5"
+            };
+
+            const app = initializeApp(firebaseConfig);
+            const db = getDatabase(app);
+
+            // Inicializa votos si no existen
+            const defaultVotes = {
+                "01": { "loved": 0, "watched": 0 },
+                "02": { "exposed": 0, "popular": 0 },
+                "03": { "small": 0, "smart": 0 },
+                "04": { "fully": 0, "hopeso": 0 }
+            };
+
+            get(ref(db, "votes")).then(snapshot => {
+                if (!snapshot.exists()) {
+                    update(ref(db, "votes"), defaultVotes);
+                }
+            });
+
+            // Expón funciones globales para main.js
+            window.getVotesFromDB = () => get(ref(db, "votes")).then(s => s.val());
+            window.addVoteToDB = (caseId, value) => {
+                return get(ref(db, `votes/${caseId}/${value}`)).then(snapshot => {
+                    const current = snapshot.val() || 0;
+                    return update(ref(db, `votes/${caseId}`), { [value]: current + 1 });
+                });
+            };
+        </script>
 
         <!-- GSAP -->
         <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
