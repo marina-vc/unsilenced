@@ -494,6 +494,7 @@
         position: absolute;
         top: var(--spacing-xs);
         right: var(--spacing-s);
+        display: none; 
     }
 
     .case__response-count {
@@ -510,6 +511,7 @@
         width: 100%;
         height: 30vh;
         z-index: 10;
+        pointer-events: none;
 
         display: flex;
         align-items: flex-end;
@@ -547,7 +549,7 @@
         }
 
         .case__number,
-        .case__context {font-size: var(--font-size-18); width: 70vw; max-width: 600px;}
+        .case__context {font-size: var(--font-size-18); max-width: 450px;}
 
         .case__options {
             min-height: 60dvh;

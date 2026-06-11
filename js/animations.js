@@ -341,7 +341,7 @@ document.addEventListener("DOMContentLoaded", () => {
         gsap.to(optionsWrapper, { opacity: 1, duration: 1, ease: "power2.out", delay: 1.2 });
         gsap.to(options, {
             opacity: 1, y: 0, duration: 2, ease: "power2.out",
-            stagger: { each: 0.15 }, delay: 1.2
+            stagger: { each: 0.15 }, delay: 1.2,
         });
     };
 
