@@ -84,11 +84,12 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: 40%;
-    border: none;
+    border: 1px solid white;
+    border-color: white;
 }
 @media (min-width: 1024px) {
     .btn--back--white{cursor: pointer; transition: all 0.3s ease;}
-    .btn--back--white:hover{opacity: 0.75;}
+    .btn--back--white:hover{opacity: 0.75; background-color: none;}
 }
 
 /* Back — white line */
@@ -109,7 +110,13 @@
 }
 @media (min-width: 1024px) {
     .btn--back--lined {cursor: pointer; transition: all 0.3s ease;}
-    .btn--back--lined:hover{opacity: 0.75;}
+    .btn--back--lined:hover{
+        opacity: 0.75; background-color: white;
+        svg {
+            fill: black;
+            stroke: black;
+        }
+    }
 }
 
 /* Play — white square */
