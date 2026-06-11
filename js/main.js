@@ -4,6 +4,19 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
+    setTimeout(() => {
+        if (!window.getVotesFromDB) return;
+        window.getVotesFromDB().then(votes => {
+            document.querySelectorAll(".case__response-count").forEach(el => {
+                const caseId = el.dataset.case;
+                if (votes && votes[caseId]) {
+                    const total = Object.values(votes[caseId]).reduce((a, b) => a + b, 0);
+                    if (total > 0) el.textContent = total + " responses";
+                }
+            });
+        });
+    }, 1000);
+
     const show = (el) => { el.style.display = "flex"; }
     const hide = (el) => { el.style.display = "none"; }
 
@@ -36,60 +49,66 @@ document.addEventListener("DOMContentLoaded", () => {
         hide(currentScreen);
         case01.style.display = "block";
         questionEl.style.display = "flex";
-        window.animateCaseQuestion(questionEl); // ← full parallax
+        window.animateCaseQuestion(questionEl);
         currentScreen = questionEl;
         isTransitioning = false;
     });
 
 
     // ============================================================
-    // VOTING
+    // VOTING — with Firebase (WIP)
     // ============================================================
-
     document.querySelectorAll(".case__option").forEach(option => {
         option.addEventListener("click", (e) => {
             const optionEl = e.currentTarget;
             const optionsEl = optionEl.closest(".case__options");
             const votedValue = optionEl.dataset.value;
-            const percentages = {
-                loved: 10, watched: 90,
-                exposed: 75, popular: 25,
-                small: 80, smart: 20,
-                fully: 30, hopeso: 70
-            };
+            const caseId = optionEl.dataset.case;
 
-            optionsEl.querySelectorAll(".case__option").forEach(opt => {
-                const value = opt.dataset.value;
-                const pct = percentages[value] || 50;
-                const percentEl = opt.querySelector(".case__result-percent");
+            window.addVoteToDB(caseId, votedValue).then(() => {
+                window.getVotesFromDB().then(votes => {
+                    const caseVotes = votes[caseId];
+                    const total = Object.values(caseVotes).reduce((a, b) => a + b, 0);
 
-                gsap.to(opt, {
-                    flex: pct / 10,
-                    duration: 1.2,
-                    ease: "expo.inOut",
-                    onComplete: () => {
-                        if (percentEl) {
-                            percentEl.textContent = pct + "%";
-                            gsap.fromTo(percentEl,
-                                { opacity: 0, display: "block" },
-                                { opacity: 1, duration: 0.4, ease: "power2.out",
-                                  onComplete: () => {
-                                      const scrollIndicator = optionsEl.closest(".case__question").querySelector(".case__scroll-indicator");
-                                      if (scrollIndicator) {
-                                          scrollIndicator.classList.remove("hidden");
-                                          setTimeout(() => { scrollIndicator.classList.add("visible"); }, 50);
-                                      }
-                                  }
+                    // Actualitza el contador
+                    const countEl = document.querySelector(`.case__response-count[data-case="${caseId}"]`);
+                    if (countEl) countEl.textContent = total + " responses";
+
+                    optionsEl.querySelectorAll(".case__option").forEach(opt => {
+                        const value = opt.dataset.value;
+                        const pct = total === 0 ? 50 : Math.round((caseVotes[value] / total) * 100);
+                        const percentEl = opt.querySelector(".case__result-percent");
+
+                        gsap.to(opt, {
+                            flex: pct / 10,
+                            duration: 1.2,
+                            ease: "expo.inOut",
+                            onComplete: () => {
+                                if (percentEl) {
+                                    percentEl.textContent = pct + "%";
+                                    gsap.fromTo(percentEl,
+                                        { opacity: 0, display: "block" },
+                                        { opacity: 1, duration: 0.4, ease: "power2.out",
+                                        onComplete: () => {
+                                            const scrollIndicator = optionsEl.closest(".case__question").querySelector(".case__scroll-indicator");
+                                            if (scrollIndicator) {
+                                                scrollIndicator.classList.remove("hidden");
+                                                setTimeout(() => { scrollIndicator.classList.add("visible"); }, 50);
+                                            }
+                                        }
+                                        }
+                                    );
                                 }
-                            );
-                        }
-                    }
-                });
+                            }
+                        });
 
-                if (value === votedValue) opt.classList.add("selected");
+                        if (value === votedValue) opt.classList.add("selected");
+                    });
+                });
             });
         });
     });
+
 
     // ============================================================
     // NAVIGATION — case__question > case__data (scroll/swipe)
@@ -109,6 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     });
 
+
     // ============================================================
     // PLAY BUTTON — case__data > case__data-visual
     // ============================================================
@@ -127,13 +147,13 @@ document.addEventListener("DOMContentLoaded", () => {
             visualEl.classList.remove("hidden");
             visualEl.classList.add("visible");
 
-            // Fade in visual
             gsap.fromTo(visualEl,
                 { opacity: 0 },
                 { opacity: 1, duration: 0.5, ease: "power2.out" }
             );
         });
     });
+
 
     // ============================================================
     // GLOBAL FOOTER
@@ -180,7 +200,7 @@ document.addEventListener("DOMContentLoaded", () => {
         hideFooter();
         caseEl.style.display = "block";
         show(questionEl);
-        window.fadeCaseQuestion(questionEl); // ← simple fade
+        window.fadeCaseQuestion(questionEl);
         currentScreen = questionEl;
     });
 
@@ -196,7 +216,7 @@ document.addEventListener("DOMContentLoaded", () => {
             nextCaseEl.style.display = "block";
             const questionEl = nextCaseEl.querySelector(".case__question");
             show(questionEl);
-            window.animateCaseQuestion(questionEl); // ← full parallax
+            window.animateCaseQuestion(questionEl);
             currentScreen = questionEl;
         } else {
             hide(dataEl);
@@ -204,26 +224,47 @@ document.addEventListener("DOMContentLoaded", () => {
             const closingEl = document.getElementById("closing");
             const closing01 = document.getElementById("closing-01");
             const closing02 = document.getElementById("closing-02");
+            const closingNext = document.getElementById("closing-next");
 
             closing01.style.display = "none";
             closing02.style.display = "none";
-            const closingNext = document.getElementById("closing-next");
             closingNext.setAttribute("disabled", "");
             closingNext.style.opacity = "0.3";
 
+            document.getElementById("intro").style.display = "none"; // ← oculta intro
             show(closingEl);
+            gsap.set(closing01, { opacity: 0 });
             closing01.style.display = "flex";
+            window.fadeIn(closing01);
             currentScreen = closingEl;
 
             setTimeout(() => {
-                closing01.style.display = "none";
-                closing02.style.display = "flex";
-                closingNext.removeAttribute("disabled");
-                setTimeout(() => {
-                    closingNext.style.opacity = "1";
-                }, 50);
-            }, 2000);
+                window.fadeOut(closing01, 0.6, () => {
+                    closing01.style.display = "none";
+                    gsap.set(closing02, { opacity: 0 });
+                    closing02.style.display = "flex";
+                    window.fadeIn(closing02);
+                    closingNext.removeAttribute("disabled");
+                    setTimeout(() => { closingNext.style.opacity = "1"; }, 50);
+                });
+            }, 3000);
         }
+    });
+
+
+    // ============================================================
+    // CLOSING NEXT — closing > menu-closing
+    // ============================================================
+    document.getElementById("closing-next").addEventListener("click", () => {
+        window.fadeOut(document.getElementById("closing"), 0.6, () => {
+            hide(document.getElementById("closing"));
+            const menuClosingEl = document.getElementById("menu-closing");
+            document.getElementById("intro").style.display = "none"; // ← oculta intro
+            gsap.set(menuClosingEl, { opacity: 0 });
+            show(menuClosingEl);
+            window.fadeIn(menuClosingEl);
+            currentScreen = menuClosingEl;
+        });
     });
 
 
@@ -232,13 +273,22 @@ document.addEventListener("DOMContentLoaded", () => {
     // ============================================================
     document.querySelector(".header__logo").addEventListener("click", (e) => {
         e.preventDefault();
-        document.querySelectorAll(".case, .case__data, #intro-description, #closing").forEach(el => {
-            el.style.display = "none";
+
+        gsap.to(currentScreen, {
+            opacity: 0,
+            duration: 0.5,
+            ease: "power2.inOut",
+            onComplete: () => {
+                document.querySelectorAll(".case, .case__data, #intro-description, #closing, #menu-closing, #contact").forEach(el => {
+                    el.style.display = "none";
+                });
+                hideFooter();
+                const introEl = document.getElementById("intro");
+                introEl.style.display = "flex";
+                gsap.to(introEl, { opacity: 1, duration: 0.5, ease: "power2.inOut" });
+                currentScreen = introEl;
+            }
         });
-        hideFooter();
-        const introEl = document.getElementById("intro");
-        introEl.style.display = "flex";
-        currentScreen = introEl;
     });
 
 
@@ -248,8 +298,13 @@ document.addEventListener("DOMContentLoaded", () => {
     const showContactScreen = (hideId, showId) => {
         const hideEl = document.getElementById(hideId);
         const showEl = document.getElementById(showId);
-        hideEl.style.display = "none";
-        showEl.style.display = "flex";
+        
+        gsap.set(showEl, { opacity: 0, display: "flex" });
+        gsap.to(showEl, { opacity: 1, duration: 0.2, ease: "power2.out" });
+        gsap.to(hideEl, { opacity: 0, duration: 0.2, ease: "power2.in", onComplete: () => {
+            hideEl.style.display = "none";
+            gsap.set(hideEl, { opacity: 1 });
+        }});
     };
 
     document.querySelectorAll(".js-open-contact").forEach(el => {
@@ -265,9 +320,13 @@ document.addEventListener("DOMContentLoaded", () => {
                 screen.style.display = "none";
             });
 
-            show(document.getElementById("contact"));
-            document.getElementById("contact-01").style.display = "flex";
-            currentScreen = document.getElementById("contact");
+            const contactEl = document.getElementById("contact");
+            const contact01 = document.getElementById("contact-01");
+            gsap.set(contactEl, { opacity: 0, display: "flex" });
+            gsap.set(contact01, { opacity: 0, display: "flex" });
+            gsap.to(contactEl, { opacity: 1, duration: 0.5, ease: "power2.out" });
+            gsap.to(contact01, { opacity: 1, duration: 0.5, ease: "power2.out" });
+            currentScreen = contactEl;
         });
     });
 
@@ -379,23 +438,12 @@ document.addEventListener("DOMContentLoaded", () => {
             caseEl.style.display = "block";
             const questionEl = caseEl.querySelector(".case__question");
             show(questionEl);
-            window.fadeCaseQuestion(questionEl); // ← simple fade
+            window.fadeCaseQuestion(questionEl);
             currentScreen = questionEl;
         });
     });
 
     menuBtn.addEventListener("click", openMenu);
     menuClose.addEventListener("click", closeMenu);
-
-
-    // ============================================================
-    // MENU CLOSING
-    // ============================================================
-    document.getElementById("closing-next").addEventListener("click", () => {
-        hide(document.getElementById("closing"));
-        show(document.getElementById("menu-closing"));
-        currentScreen = document.getElementById("menu-closing");
-    });
-
 
 });

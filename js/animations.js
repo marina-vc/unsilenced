@@ -25,6 +25,64 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
     // ============================================================
+    // INTRO — Video grid fade in entrance + hover spotlight
+    // ============================================================
+    const introVideos = Array.from(document.querySelectorAll(".intro__video"));
+
+    let allLoaded = false;
+    let loadedCount = 0;
+
+    introVideos.forEach((video, index) => {
+        video.playbackRate = 0.75;
+        const delay = index === 0 ? 0 : Math.random() * 1.5;
+        gsap.to(video, {
+            opacity: 0.6,
+            duration: 3,
+            ease: "power2.inOut",
+            delay: delay,
+            onComplete: () => {
+                loadedCount++;
+                if (loadedCount === introVideos.length) {
+                    allLoaded = true;
+                }
+            }
+        });
+    });
+
+    // Hover spotlight — solo desktop
+    if (window.matchMedia("(min-width: 768px)").matches) {
+        const wrapper = document.querySelector(".intro__video--wrapper");
+        let currentHovered = null;
+
+        wrapper.addEventListener("mousemove", (e) => {
+            if (!allLoaded) return;
+            const video = e.target.tagName === "VIDEO" ? e.target : null;
+
+            if (video !== currentHovered) {
+                if (currentHovered) {
+                    gsap.killTweensOf(currentHovered);
+                    gsap.to(currentHovered, { opacity: 0.6, duration: 0.7, ease: "power2.out" });
+                }
+                if (video) {
+                    gsap.killTweensOf(video);
+                    gsap.to(video, { opacity: 1, duration: 0.3, ease: "power2.out" });
+                }
+                currentHovered = video;
+            }
+        });
+
+        wrapper.addEventListener("mouseleave", () => {
+            if (!allLoaded) return;
+            if (currentHovered) {
+                gsap.killTweensOf(currentHovered);
+                gsap.to(currentHovered, { opacity: 0.6, duration: 0.3, ease: "power2.out" });
+                currentHovered = null;
+            }
+        });
+    }
+
+
+    // ============================================================
     // INTRO — Title entrance animation
     // ============================================================
     const subtitleLines = introSubtitle.innerHTML.split("<br>").map((line, i) => {
@@ -47,7 +105,7 @@ document.addEventListener("DOMContentLoaded", () => {
         duration: 2,
         ease: "power2.out",
         stagger: { each: 0.15 },
-        delay: 0.2,
+        delay: 1.5,
         onComplete: () => {
             gsap.to(introFootnote, {
                 opacity: 1,
@@ -97,10 +155,12 @@ document.addEventListener("DOMContentLoaded", () => {
     tlBack
         .set(introDescriptionEl, { display: "none" })
         .set(introEl, { display: "flex", opacity: 0 })
+        .set(introVideos, { opacity: 0 }) // ← añade esto
         .set(introSubtitle, { y: 15, opacity: 0 })
         .set(introScrollIndicator, { y: 10, opacity: 0 })
         .set(introFootnote, { y: 15, opacity: 0 })
         .to(introEl, { opacity: 1, duration: 0.7, ease: "power1.inOut" })
+        .to(introVideos, { opacity: 0.6, duration: 0.8, ease: "power2.out" }, "-=0.4") // ← añade esto
         .to(introSubtitle, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, "-=0.4")
         .to(introFootnote, { y: 0, opacity: 1, duration: 0.7, ease: "power2.out" }, "-=0.6")
         .to(introScrollIndicator, { y: 0, opacity: 1, duration: 0.6, ease: "power2.out" }, "-=0.5");
@@ -136,6 +196,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 gsap.set(introScrollIndicator, { y: 0, opacity: 1 });
                 gsap.set(introFootnote, { y: 0, opacity: 1 });
                 tlBack.progress(0).pause();
+                gsap.set(allChars, { opacity: 0, filter: "blur(8px)", y: 4 }); // ← añade
+                gsap.set(bottom, { opacity: 0 }); // ← añade
                 tlIntro.restart();
             }
         } else {
@@ -204,10 +266,12 @@ document.addEventListener("DOMContentLoaded", () => {
         const delta = touchStartY - e.changedTouches[0].clientY;
         if (delta > 250) {
             triggered = true;
-            gsap.set(introSubtitle, { y: 0, opacity: 1 });
+            ggsap.set(introSubtitle, { y: 0, opacity: 1 });
             gsap.set(introScrollIndicator, { y: 0, opacity: 1 });
             gsap.set(introFootnote, { y: 0, opacity: 1 });
             tlBack.progress(0).pause();
+            gsap.set(allChars, { opacity: 0, filter: "blur(8px)", y: 4 }); // ← añade
+            gsap.set(bottom, { opacity: 0 }); // ← añade
             tlIntro.restart();
         } else {
             gsap.to(introSubtitle, { y: 0, opacity: 1, duration: 0.3 });
@@ -264,7 +328,6 @@ document.addEventListener("DOMContentLoaded", () => {
         const optionsWrapper = questionEl.querySelector(".case__options");
         const gradient = questionEl.querySelector(".case__scroll-indicator");
 
-        // Reset gradient
         if (gradient) gsap.set(gradient, { height: "30vh", backgroundColor: "" });
 
         gsap.set(headerParagraphs, { opacity: 0, y: 20 });
@@ -282,6 +345,7 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+
     // ============================================================
     // CASE QUESTION — Simple fade (menu, back button)
     // ============================================================
@@ -289,7 +353,6 @@ document.addEventListener("DOMContentLoaded", () => {
         if (questionEl._resetTransition) questionEl._resetTransition();
         const gradient = questionEl.querySelector(".case__scroll-indicator");
 
-        // Reset gradient
         if (gradient) gsap.set(gradient, { height: "30vh", backgroundColor: "" });
 
         gsap.fromTo(questionEl,
@@ -312,7 +375,6 @@ document.addEventListener("DOMContentLoaded", () => {
         let touchStartY = 0;
         let triggered = false;
 
-        // Reset expuesto para que fadeCaseQuestion/animateCaseQuestion lo llamen
         questionEl._resetTransition = () => {
             triggered = false;
             accumDown = 0;
@@ -329,14 +391,11 @@ document.addEventListener("DOMContentLoaded", () => {
         const triggerTransition = () => {
             triggered = true;
 
-            // Phase 1 — gradient expands to cover screen
             gsap.to(gradient, {
                 height: "100dvh",
                 duration: 0.5,
                 ease: "power2.in",
                 onComplete: () => {
-
-                    // Phase 2 — fade to full black
                     gsap.to(gradient, {
                         backgroundColor: "var(--color-black)",
                         duration: 0.3,
@@ -344,7 +403,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         onComplete: () => {
                             onComplete();
 
-                            // Phase 3 — fade in text, then photo
                             const dataHeader = dataEl.querySelector(".case__data-header");
                             const dataScroll = dataEl.querySelector(".case__data-scroll");
                             const dataImg = dataEl.querySelector("img");
@@ -368,7 +426,6 @@ document.addEventListener("DOMContentLoaded", () => {
             accumDown = 0;
         };
 
-        // Wheel
         questionEl.addEventListener("wheel", (e) => {
             if (triggered) return;
             if (e.deltaY > 0) {
@@ -382,7 +439,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
         });
 
-        // Touch
         questionEl.addEventListener("touchstart", (e) => {
             touchStartY = e.touches[0].clientY;
         });
@@ -407,9 +463,22 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     };
 
+    // ============================================================
+    // CLOSING — Fade transition
+    // ============================================================
+    const fadeIn = (el, duration = 0.8) => {
+        gsap.set(el, { opacity: 0 });
+        gsap.to(el, { opacity: 1, duration, ease: "power2.out" });
+    };
+
+    const fadeOut = (el, duration = 0.6, onComplete) => {
+        gsap.to(el, { opacity: 0, duration, ease: "power2.inOut", onComplete });
+    };
+
+    window.fadeIn = fadeIn;
+    window.fadeOut = fadeOut;
 
     window.initCaseTransition = initCaseTransition;
-
     window.animateCaseQuestion = animateCaseQuestion;
     window.fadeCaseQuestion = fadeCaseQuestion;
 
